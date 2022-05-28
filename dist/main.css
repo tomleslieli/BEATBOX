@@ -1,0 +1,245 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+body {
+  background-color: rgb(254, 240, 225);
+}
+
+header {
+  display: inline-block;
+}
+
+.logo img {
+  width: 25%;
+}
+
+/* BOTH BOXES */
+.info-and-tag {
+  white-space: nowrap;
+}
+
+.track-info {
+  display: inline-block;
+  font-family: sans-serif;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 10px;
+  width: 19%;
+  height: 25%;
+  max-height: 40px;
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  background-color: rgb(151, 210, 235);
+  padding: 5px 25px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.upload {
+  position: relative;
+  display: inline-block;
+  top: -8px;
+  left: 3px;
+  border: 0px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 10px;
+  min-width: 55px;
+  max-width: 5.5%;
+  min-height: 34px;
+  border-radius: 35px;
+  background-color: rgb(151, 210, 235);
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+}
+
+.upload .btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 10px;
+  cursor: pointer;
+}
+
+/* TOP BOX */
+.track-info .track-name {
+  position: relative;
+  top: -1px;
+  left: -7px;
+}
+
+.track-info .artist-name {
+  position: relative;
+  left: -7px;
+}
+
+/* BOTTOM BOX */
+.waveform {
+  z-index: 1;
+  background: rgb(249, 222, 187);
+  width: 25%;
+  height: 130px;
+  box-shadow: 0 5px 5px -4px rgba(12, 248, 252, 0.3);
+  padding: 5px 25px;
+  border-radius: 25px;
+  position: relative;
+  top: 10px;
+}
+
+.wave-text {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  z-index: 5;
+  position: relative;
+  color: aliceblue;
+  top: -5px;
+  left: 6px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.wave-text-background {
+  background-color: rgb(151, 210, 235);
+  border-radius: 10px;
+  max-height: 22px;
+  max-width: 110px;
+  margin-top: 8px;
+  margin-left: -9px;
+  margin-right: -9px;
+}
+
+.waveform-slider {
+  white-space: nowrap;
+  position: relative;
+  top: -25px;
+}
+
+.waveform-slider .waveform {
+  display: inline-block;
+}
+
+.waveform-slider .side-slider {
+  display: inline-block;
+}
+
+.player {
+  z-index: 3;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  min-width: 100px;
+}
+
+/* VOLUME-SLIDER-RELATED */
+.side-slider {
+  transform-origin: top left;
+  position: relative;
+  left: -52px;
+  top: -20px;
+}
+
+.side-slider #track-a-range {
+  width: 140px;
+  appearance: none;
+  background: rgb(249, 222, 187);
+  box-shadow: 0 -5px 5px -4px rgba(12, 248, 252, 0.3);
+  padding: 1px;
+  border-radius: 10px;
+}
+
+.side-slider #track-a-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgb(151, 210, 235);
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[id=track-a-range] {
+  transform: rotate(270deg);
+}
+
+.under-wave {
+  white-space: nowrap;
+}
+
+.audio-buttons {
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  left: 2px;
+  cursor: pointer;
+}
+
+.audio-buttons .play-button .fa-circle-pause {
+  display: none;
+}
+
+.audio-buttons .play-button.playing .fa-circle-pause {
+  display: inline-block;
+  color: rgb(151, 210, 235);
+}
+
+.audio-buttons .play-button.playing .fa-circle-play {
+  display: none;
+}
+
+.fa-regular {
+  color: rgb(249, 222, 187);
+}
+
+.hot-cues {
+  display: inline-block;
+  position: relative;
+  left: 12px;
+  top: -16px;
+  cursor: pointer;
+}
+
+.hot-cues .hot-cue-2 {
+  position: relative;
+  left: 10px;
+}
+
+.hot-cues .hot-cue-1.clicked .fa-solid {
+  color: rgb(151, 210, 235);
+}
+
+.hot-cues .hot-cue-2.clicked .fa-solid {
+  color: rgb(151, 210, 235);
+}
+
+.fa-solid {
+  color: rgb(249, 222, 187);
+}
+
+.reset-cues {
+  display: inline-block;
+  position: relative;
+  left: -41px;
+  top: 18px;
+}
+
+.reset-cues .reset-cue-2 {
+  position: relative;
+  left: 12px;
+}
+
+:hover.fa-regular.fa-circle-play {
+  color: rgb(255, 202, 175);
+}
+
+:hover.fa-regular.fa-circle-stop {
+  color: rgb(255, 202, 175);
+}
+
+:hover.fa-solid.fa-rotate-left {
+  color: rgb(255, 202, 175);
+}
+
+:hover.fa-solid {
+  color: rgb(255, 202, 175);
+}

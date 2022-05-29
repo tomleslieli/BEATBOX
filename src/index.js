@@ -1,3 +1,8 @@
+// SPLASH SCREEN
+const splashScreen = document.querySelector(".splash")
+splashScreen.addEventListener("click", () => {
+    splashScreen.classList.add("clicked")
+})
 // WAVESURFER PROPERTIES
 var audioTrack = WaveSurfer.create({
     container: '.player',
@@ -11,15 +16,25 @@ var audioTrack = WaveSurfer.create({
     scrollParent: true,
     hideScrollbar: true
 });
+// LOADING & CLEARING TRACKS
+const clearTrack = document.querySelector(".clear")
+document.getElementById("upload-file").addEventListener("change", function(e){
+    let newFile = this.files[0];
 
-//AUDIO LOADER
-//./audio/all_love.mp3
-//./audio/chameleon.mp3
-//./audio/how_does_it_feel.mp3
-//./audio/let_go.mp3
-//./audio/new_soul.mp3
+    if (newFile) {
+        var file = new FileReader();
 
-audioTrack.load('./audio/let_go.mp3');
+        file.onload = function(el){
+            var track = new window.Blob([new Uint8Array(el.target.result)]);
+            audioTrack.loadBlob(track);
+        };
+        file.readAsArrayBuffer(newFile);
+        audioTrack.load(file);
+    }
+}, false);
+clearTrack.addEventListener("click", () => {
+    audioTrack.empty();
+})
 
 // DEFAULTS
 let hotCue01 = 0;
@@ -31,16 +46,14 @@ let loop = {
     out: 0,
     looped: false
 };
-// SPLASH SCREEN
-const splashScreen = document.querySelector(".splash")
-splashScreen.addEventListener("click", () => {
-    splashScreen.classList.add("clicked")
-})
 // WAVEFORM VIEW
 const toggleView = document.querySelector(".toggle")
 toggleView.addEventListener("click", () => {
     audioTrack.toggleScroll();
 })
+
+//UPLOAD FILE
+
 // PLAY / STOP BUTTONS
 const playButton = document.querySelector(".play-button")
 const stopButton = document.querySelector(".stop-button")

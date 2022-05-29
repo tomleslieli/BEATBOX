@@ -54,10 +54,10 @@ header {
     display:flex;
     justify-content: center;
     font-weight: 50;
-    top: 200px;
+    top: 180px;
+    left: 17px;
     margin-left: 50px;
-    margin-right: 55%;
-    margin-bottom: 500px;
+    margin-right: 20%;
 }
 // .continue-button
 :hover#welcome {
@@ -142,7 +142,7 @@ header {
 .upload {
     position: relative;
     display: inline-block;
-    top: -8px;
+    top: -20px;
     left: 3px;
     border: 0px;
     font-family: sans-serif;
@@ -155,14 +155,33 @@ header {
     border-radius: 35px;
     background-color: rgb(151, 210, 235);
     box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
-}
-.upload .btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    top: 10px;
-    left: 0px;
     cursor: pointer;
+}
+.upload label {
+    position: relative;
+    left: 15px;
+    top: 6px;
+    cursor: pointer;
+}
+.clear-track {
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    top: -18px;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(151, 210, 235);
+    box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+    border-radius: 15px;
+}
+.clear-track .clear {
+    position: relative;
+    font-family: sans-serif;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 10px;
+    left: 12px;
+    top: 5px;
 }
 /* TOP BOX */
 .track-info .track-name {

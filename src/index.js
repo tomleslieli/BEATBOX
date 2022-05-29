@@ -3,8 +3,8 @@ const splashScreen = document.querySelector(".splash")
 splashScreen.addEventListener("click", () => {
     splashScreen.classList.add("clicked")
 })
-// WAVESURFER PROPERTIES
-var audioTrack = WaveSurfer.create({
+// LOADING & CLEARING TRACKS
+let audioTrack = WaveSurfer.create({
     container: '.player',
     waveColor: 'rgb(151, 210, 235)',
     progressColor: 'rgb(300, 150, 90)',
@@ -16,31 +16,30 @@ var audioTrack = WaveSurfer.create({
     scrollParent: true,
     hideScrollbar: true
 });
-// LOADING & CLEARING TRACKS
 const clearTrack = document.querySelector(".clear")
 document.getElementById("upload-file").addEventListener("change", function(e){
     let newFile = this.files[0];
-
     if (newFile) {
-        var file = new FileReader();
+        let file = new FileReader();
 
         file.onload = function(el){
-            var track = new window.Blob([new Uint8Array(el.target.result)]);
+            let track = new window.Blob([new Uint8Array(el.target.result)]);
             audioTrack.loadBlob(track);
         };
         file.readAsArrayBuffer(newFile);
         audioTrack.load(file);
+        playButton.classList.remove("playing")
     }
 }, false);
 clearTrack.addEventListener("click", () => {
     audioTrack.empty();
+    playButton.classList.remove("playing")
 })
-
 // DEFAULTS
 let hotCue01 = 0;
 let hotCue02 = 0;
-let totalDuration01 = 0;
-let totalDuration02 = 0;
+let totalDuration01;
+let totalDuration02;
 let loop = {
     in: 0,
     out: 0,
@@ -51,9 +50,6 @@ const toggleView = document.querySelector(".toggle")
 toggleView.addEventListener("click", () => {
     audioTrack.toggleScroll();
 })
-
-//UPLOAD FILE
-
 // PLAY / STOP BUTTONS
 const playButton = document.querySelector(".play-button")
 const stopButton = document.querySelector(".stop-button")

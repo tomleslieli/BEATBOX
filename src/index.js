@@ -19,28 +19,31 @@ var audioTrack = WaveSurfer.create({
 //./audio/let_go.mp3
 //./audio/new_soul.mp3
 
-audioTrack.load('./audio/all_love.mp3');
+audioTrack.load('./audio/let_go.mp3');
 
 // DEFAULTS
 let hotCue01 = 0;
 let hotCue02 = 0;
 let totalDuration01 = 0;
 let totalDuration02 = 0;
-let loopInVal = 0;
-let loopOutVal = 0;
-
-//QUERY SELECTORS
+let loop = {
+    in: 0,
+    out: 0,
+    looped: false
+};
+// SPLASH SCREEN
+const splashScreen = document.querySelector(".splash")
+splashScreen.addEventListener("click", () => {
+    splashScreen.classList.add("clicked")
+})
+// WAVEFORM VIEW
+const toggleView = document.querySelector(".toggle")
+toggleView.addEventListener("click", () => {
+    audioTrack.toggleScroll();
+})
+// PLAY / STOP BUTTONS
 const playButton = document.querySelector(".play-button")
 const stopButton = document.querySelector(".stop-button")
-const volSlider = document.querySelector(".vol-slider")
-const hotCueOne = document.querySelector(".hot-cue-1")
-const hotCueTwo = document.querySelector(".hot-cue-2")
-const resetCueOne = document.querySelector(".reset-cue-1")
-const resetCueTwo = document.querySelector(".reset-cue-2")
-const loopIn = document.querySelector(".loop-in")
-const loopOut = document.querySelector(".loop-out")
-const clearLoop = document.querySelector(".clear-loop")
-// PLAY / STOP BUTTONS
 playButton.addEventListener("click", () => {
     startPlayback();
 })
@@ -48,10 +51,16 @@ stopButton.addEventListener("click", () => {
     stopPlayback();
 })
 // VOL SLIDER
+const volSlider = document.querySelector(".vol-slider")
 volSlider.addEventListener("input", () => {
     modVol(volSlider.value);
 })
 // HOTCUES
+const hotCueOne = document.querySelector(".hot-cue-1")
+const hotCueTwo = document.querySelector(".hot-cue-2")
+const resetCueOne = document.querySelector(".reset-cue-1")
+const resetCueTwo = document.querySelector(".reset-cue-2")
+
 hotCueOne.addEventListener("click", () => {
     if (!hotCueOne.classList.contains("clicked") && hotCue01 === 0){
         hotCueOne.classList.add("clicked");
@@ -60,6 +69,12 @@ hotCueOne.addEventListener("click", () => {
         totalDuration01 = audioTrack.getDuration();
         let currTimeOne = hotCue01 / totalDuration01
         audioTrack.seekTo(currTimeOne);
+
+        loop.looped = false;
+        loopIn.classList.remove("clicked");
+        loopOut.classList.remove("clicked");
+        loop.in = 0;
+        loop.out = 0;
     }
 })
 resetCueOne.addEventListener("click", () => {
@@ -76,6 +91,12 @@ hotCueTwo.addEventListener("click", () => {
         totalDuration02 = audioTrack.getDuration();
         let currTimeTwo = hotCue02 / totalDuration02
         audioTrack.seekTo(currTimeTwo);
+
+        loop.looped = false;
+        loopIn.classList.remove("clicked");
+        loopOut.classList.remove("clicked");
+        loop.in = 0;
+        loop.out = 0;
     }
 })
 resetCueTwo.addEventListener("click", () => {
@@ -85,25 +106,40 @@ resetCueTwo.addEventListener("click", () => {
     }
 })
 // LOOP
+const loopIn = document.querySelector(".loop-in")
+const loopOut = document.querySelector(".loop-out")
+const clearLoop = document.querySelector(".clear-loop")
+audioTrack.on('audioprocess', function() {
+    if (loop.looped && loop.in && 
+        audioTrack.getCurrentTime().toFixed(2) === loop.out){
+        doTheLoop();
+    }
+})
+const doTheLoop = function(){
+    loop.looped = true;
+    audioTrack.play(loop.in);
+}
 loopIn.addEventListener("click", () => {
-    if (!loopIn.classList.contains("clicked") && !loopInVal){
-        loopInVal = audioTrack.getCurrentTime();
+    if (!loopIn.classList.contains("clicked") && !loop.in){
+        loop.in = audioTrack.getCurrentTime();
         loopIn.classList.add("clicked");
     };
 })
 loopOut.addEventListener("click", () => {
-    if (!loopOut.classList.contains("clicked") && loopInVal > 0 && !loopOutVal){
-        loopOutVal = audioTrack.getCurrentTime();
+    if (loop.in > 0 && !loop.out) {
+        loop.out = audioTrack.getCurrentTime().toFixed(2);
         loopOut.classList.add("clicked");
+        if (audioTrack.isPlaying()) audioTrack.stop();
+        doTheLoop();
     };
 })
 clearLoop.addEventListener("click", () => {
-    if (loopInVal > 0 && loopOutVal > 0) {
-        loopInVal = 0;
-        loopOutVal = 0;
+        loop.looped = false;
+        audioTrack.play(audioTrack.getCurrentTime());
         loopIn.classList.remove("clicked");
         loopOut.classList.remove("clicked");
-    }
+        loop.in = 0;
+        loop.out = 0;
 })
 // PLAYBACK HELPER FUNCTIONS
 function startPlayback(){
@@ -137,6 +173,8 @@ audioTrack.on('audioprocess', function() {
         let totalSec = audioTrack.getDuration();
         let totalTime = timeafy(totalSec)
         document.getElementById('current').innerText = currTime + " / " + totalTime;
+    } else if (audioTrack.getCurrentTime() === audioTrack.getDuration()) {
+        audioTrack.stopPlayback();
     }
 })
 function timeafy(input){

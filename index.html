@@ -15,22 +15,53 @@
             crossorigin= "anonymous"
             referrerpolicy= "no-referrer" />
     </head>
-
     <body>
+        <div class="splash-container">
+            <div class="splash">
+                <h1 id="welcome">Welcome to BeatBox</h1>
+                <h5 id="info">
+                    BeatBox is a free, open source four-channel DJ application.
+                    <br>
+                    Suited for both beginners as well as advanced DJs, 
+                    <br>
+                    BeatBox pairs an easy-to-use / minimalistic UI
+                    <br>
+                    with industry-standard features. 
+                    <br><br>
+                    BeatBox utilizes third-party components such as
+                    <br>
+                    Wavesurfer.js and Font-Awesome stylesheets. 
+                    <br>
+                    More information on these tools
+                    <br>
+                    follow these links:
+                    <br><br>
+                    https://wavesurfer-js.org/
+                    <br>
+                    https://fontawesome.com/
+            
+                <br><br><br><br>
+                    
+                Click anywhere to continue.
+            </h5>
+            </div>
+        </div>
         <header> 
             <div class="logo"> <img src="/assets/BEATBOXLOGO.png"> </div>
+            <div class="nav-bar">
+            </div>
         </header>
         <br><br><br>
-            <div class="info-and-tag">
-                <div class="track-info">
-                    <div class="track-name">Track: </div>
-                    <div class="artist-name">Artist: </div>
-                </div>
-                <div class="upload">
-                    <label for="files" class="btn">Load</label>
-                    <input id="files" type="file" style="visibility:hidden;" accept=".mp3, .wav">
-                </div>
+        <div class="info-and-tag">
+            <div class="track-info">
+                <div class="track-name">Track: </div>
+                <div class="artist-name">Artist: </div>
             </div>
+            <div class="upload">
+                <label for="files" class="btn">Load</label>
+                <input id="files" type="file" style="visibility:hidden;" accept=".mp3, .wav">
+            </div>
+        </div>
         <br>
         <div class = "waveform-slider">
             <div class="waveform">  
@@ -39,13 +70,19 @@
                         <p id="current" class="current">00:00 / 00:00</p>
                     </div>
                 </div>
+                
                 <div class="player-box">
                     <div class="player" id="waveform"></div>
+                </div>
+                <div class="toggle-view">
+                    <button class="toggle">Toggle View</button>
                 </div>
             </div>
             <div class="side-slider">
                 <input class="vol-slider" id="track-a-range" type="range" min="0" max="1"
                     step="0.005" value="0.5">
+                <input class="speed-slider" id="track-a-speed" type="range" min="0" max="1"
+                step="0.005" value="0.5">
             </div>
         </div>
         <div class="under-wave">
@@ -74,20 +111,14 @@
                     </span>
                 </div>
             </div>
-        </div>
-        <div class="looper">
-            <span class="loop-in">
-                In
-            </span>
-            <span class="loop-out">
-                Out
-            </span>
-            <span class="clear-loop">
-                Clear
-            </span>
+            <div class="looper">
+                <button class="loop-in">In</button>
+                <button class="loop-out">Out</button>
+                <button class="clear-loop">Clear</button>
+            </div>
         </div>
         <script src="https://unpkg.com/wavesurfer.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js" referrerpolicy="no-referrer"></script>
         <script src="./src/index.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

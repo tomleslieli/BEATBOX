@@ -2,11 +2,74 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 body {
-  background-color: rgb(254, 240, 225);
+  margin: none;
+  padding: none;
+  background-color: rgb(255, 244, 226);
 }
 
 header {
   display: inline-block;
+}
+
+.splash-container {
+  background-size: 100%;
+  margin: none;
+  padding: none;
+  white-space: none;
+}
+
+.splash {
+  z-index: 6;
+  background-size: 100%;
+  font-family: monospace;
+  margin: none;
+  padding: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(40, 80, 97);
+  color: rgb(249, 222, 187);
+  width: 125%;
+  height: 125%;
+  left: -10px;
+  top: -10px;
+  font-size: 25px;
+  opacity: 85%;
+  cursor: pointer;
+}
+
+.splash.clicked {
+  display: none;
+}
+
+#welcome {
+  position: absolute;
+  font-size: 74px;
+  margin-top: 50px;
+  margin-left: 60px;
+  font-weight: 200;
+  margin-right: 70%;
+}
+
+#info {
+  position: absolute;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  font-weight: 50;
+  top: 200px;
+  margin-left: 50px;
+  margin-right: 55%;
+  margin-bottom: 500px;
+}
+
+:hover#welcome {
+  color: rgb(255, 202, 175);
+}
+
+:hover#info {
+  color: rgb(255, 202, 175);
 }
 
 .logo img {
@@ -34,6 +97,40 @@ header {
   overflow: hidden;
 }
 
+.waveform {
+  margin-top: 10px;
+  z-index: 1;
+  background: rgb(249, 222, 187);
+  width: 26%;
+  height: 130px;
+  box-shadow: 0 5px 5px -4px rgba(12, 248, 252, 0.3);
+  padding: 5px 25px;
+  border-radius: 25px;
+}
+
+.wave-text {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  z-index: 5;
+  position: relative;
+  color: aliceblue;
+  top: -5px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.wave-text-background {
+  background-color: rgb(151, 210, 235);
+  border-radius: 10px;
+  max-height: 22px;
+  max-width: 110px;
+  margin-top: 8px;
+  margin-left: -9px;
+  margin-right: -9px;
+}
+
 .upload {
   position: relative;
   display: inline-block;
@@ -57,6 +154,7 @@ header {
   display: flex;
   justify-content: center;
   top: 10px;
+  left: 0px;
   cursor: pointer;
 }
 
@@ -70,32 +168,6 @@ header {
 .track-info .artist-name {
   position: relative;
   left: -7px;
-}
-
-/* BOTTOM BOX */
-.waveform {
-  z-index: 1;
-  background: rgb(249, 222, 187);
-  width: 25%;
-  height: 130px;
-  box-shadow: 0 5px 5px -4px rgba(12, 248, 252, 0.3);
-  padding: 5px 25px;
-  border-radius: 25px;
-  position: relative;
-  top: 10px;
-}
-
-.wave-text {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  z-index: 5;
-  position: relative;
-  color: aliceblue;
-  top: -5px;
-  left: 6px;
-  font-size: 11px;
-  font-weight: bold;
 }
 
 .wave-text-background {
@@ -134,8 +206,8 @@ header {
 .side-slider {
   transform-origin: top left;
   position: relative;
-  left: -52px;
-  top: -20px;
+  left: -60px;
+  top: -43px;
 }
 
 .side-slider #track-a-range {
@@ -162,15 +234,42 @@ input[id=track-a-range] {
   transform: rotate(270deg);
 }
 
-.under-wave {
-  white-space: nowrap;
+.side-slider #track-a-speed {
+  width: 140px;
+  appearance: none;
+  background: rgb(249, 222, 187);
+  box-shadow: 0 -5px 5px -4px rgba(12, 248, 252, 0.3);
+  padding: 1px;
+  border-radius: 10px;
+  position: relative;
+  left: -125px;
+}
+
+.side-slider #track-a-speed::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgb(151, 210, 235);
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[id=track-a-speed] {
+  transform: rotate(270deg);
+}
+
+.side-slider .fa-solid {
+  position: relative;
+  left: -50px;
 }
 
 .audio-buttons {
   display: inline-block;
   position: relative;
-  top: -10px;
-  left: 2px;
+  top: 3px;
+  left: 7px;
   cursor: pointer;
 }
 
@@ -194,7 +293,7 @@ input[id=track-a-range] {
 .hot-cues {
   display: inline-block;
   position: relative;
-  left: 12px;
+  left: 17px;
   top: -16px;
   cursor: pointer;
 }
@@ -220,26 +319,83 @@ input[id=track-a-range] {
   display: inline-block;
   position: relative;
   left: -41px;
-  top: 18px;
+  top: 22px;
 }
 
 .reset-cues .reset-cue-2 {
   position: relative;
-  left: 12px;
+  left: 12.5px;
 }
 
-:hover.fa-regular.fa-circle-play {
-  color: rgb(255, 202, 175);
-}
-
-:hover.fa-regular.fa-circle-stop {
-  color: rgb(255, 202, 175);
-}
-
-:hover.fa-solid.fa-rotate-left {
+:hover.fa-regular {
   color: rgb(255, 202, 175);
 }
 
 :hover.fa-solid {
   color: rgb(255, 202, 175);
+}
+
+button {
+  border-radius: 5px;
+  color: rgb(249, 222, 187);
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  font-size: 10px;
+  padding: 0;
+  border: none;
+}
+
+.looper {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  border: none;
+  top: -41px;
+  left: -154px;
+}
+
+.loop-in {
+  position: relative;
+  left: -8px;
+}
+
+:hover.loop-in {
+  color: rgb(255, 202, 175);
+}
+
+:hover.loop-out {
+  color: rgb(255, 202, 175);
+}
+
+.clear-loop {
+  position: relative;
+  left: 7px;
+}
+
+:hover.clear-loop {
+  color: rgb(255, 202, 175);
+}
+
+.toggle {
+  color: rgb(254, 240, 225);
+}
+
+.toggle {
+  position: relative;
+  top: 2px;
+  left: 25px;
+}
+
+:hover.toggle {
+  color: rgb(255, 202, 175);
+}
+
+.loop-in.clicked {
+  color: rgb(151, 210, 235);
+}
+
+.loop-out.clicked {
+  color: rgb(151, 210, 235);
 }

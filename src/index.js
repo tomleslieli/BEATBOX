@@ -51,16 +51,23 @@ stopButton.addEventListener("click", () => {
     stopPlayback();
 })
 // VOL SLIDER
+const modVol = (vol) => {
+    audioTrack.setVolume(vol);
+}
 const volSlider = document.querySelector(".vol-slider")
 volSlider.addEventListener("input", () => {
     modVol(volSlider.value);
+})
+//SPEED SLIDER
+const rateSlider = document.querySelector(".rate-slider")
+rateSlider.addEventListener("input", () => {
+    audioTrack.setPlaybackRate(rateSlider.value)
 })
 // HOTCUES
 const hotCueOne = document.querySelector(".hot-cue-1")
 const hotCueTwo = document.querySelector(".hot-cue-2")
 const resetCueOne = document.querySelector(".reset-cue-1")
 const resetCueTwo = document.querySelector(".reset-cue-2")
-
 hotCueOne.addEventListener("click", () => {
     if (!hotCueOne.classList.contains("clicked") && hotCue01 === 0){
         hotCueOne.classList.add("clicked");
@@ -129,6 +136,7 @@ loopOut.addEventListener("click", () => {
     if (loop.in > 0 && !loop.out) {
         loop.out = audioTrack.getCurrentTime().toFixed(2);
         loopOut.classList.add("clicked");
+        playButton.classList.add("playing")
         if (audioTrack.isPlaying()) audioTrack.stop();
         doTheLoop();
     };
@@ -160,10 +168,6 @@ function stopPlayback(){
     document.getElementById('current').innerText = "00:00 / " + totalTime;
     }
 }
-//VOLUME-RELATED
-const modVol = (vol) => {
-    audioTrack.setVolume(vol);
-}
 // TIMECODE RELATED
 audioTrack.on('audioprocess', function() {
     if (audioTrack.isPlaying()) {
@@ -173,9 +177,8 @@ audioTrack.on('audioprocess', function() {
         let totalSec = audioTrack.getDuration();
         let totalTime = timeafy(totalSec)
         document.getElementById('current').innerText = currTime + " / " + totalTime;
-    } else if (audioTrack.getCurrentTime() === audioTrack.getDuration()) {
-        audioTrack.stopPlayback();
-    }
+        document.getElementById('bpm').innerText = audioTrack.getPlaybackRate() + "x";
+    } 
 })
 function timeafy(input){
     let sec = Math.round(input);

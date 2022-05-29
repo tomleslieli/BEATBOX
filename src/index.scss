@@ -5,6 +5,9 @@ body {
 }
 header {
     display: inline-block;
+    padding: none;
+    margin: none;
+    min-width: 700px;
 }
 .splash-container {
     background-size: 100%;
@@ -89,11 +92,31 @@ header {
     margin-top: 10px;
     z-index: 1;
     background: rgb(249, 222, 187);
-    width: 26%;
+    width: 38%;
     height: 130px;
     box-shadow: 0 5px 5px -4px rgba(12, 248, 252, 0.3);
     padding: 5px 25px;
+    margin-right:3px;
     border-radius: 25px;
+}
+.bpm-container {
+    position: relative;
+    left: 125px;
+    top: -47px;
+    padding-left: 10px;
+    height: 22px;
+    width: 50px;
+    background-color: rgb(151, 210, 235);
+    border-radius: 10px;
+}
+.bpm {
+    font-size: 12px;
+    color: aliceblue;
+    position: relative;
+    left: -5px;
+    top: 4.5px;
+    display: flex;
+    justify-content: center;
 }
 .wave-text {
     margin: 0;
@@ -102,8 +125,8 @@ header {
     z-index: 5;
     position: relative;
     color: aliceblue;
-    top: -5px;
-    left:10px;
+    top: -5.5px;
+    left:12px;
     font-size: 11px;
     font-weight: bold;
 }
@@ -185,7 +208,7 @@ header {
     left: -60px;
     top: -43px
 }
-.side-slider #track-a-range {
+.side-slider #track-range {
     width: 140px;
     appearance: none;
     background:rgb(249, 222, 187);
@@ -193,7 +216,7 @@ header {
     padding: 1px;
     border-radius: 10px;
 }
-.side-slider #track-a-range::-webkit-slider-thumb{
+.side-slider #track-range::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
@@ -203,10 +226,10 @@ header {
     border-radius: 20px;
     cursor: pointer;
 }
-input[id="track-a-range"] {
+input[id="track-range"] {
     transform: rotate(270deg);
  }
-.side-slider #track-a-speed {
+.side-slider #track-speed {
     width: 140px;
     appearance: none;
     background:rgb(249, 222, 187);
@@ -216,7 +239,7 @@ input[id="track-a-range"] {
     position: relative;
     left: -125px;
 }
-.side-slider #track-a-speed::-webkit-slider-thumb{
+.side-slider #track-speed::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
@@ -226,7 +249,7 @@ input[id="track-a-range"] {
     border-radius: 20px;
     cursor: pointer;
 }
-input[id="track-a-speed"] {
+input[id="track-speed"] {
     transform: rotate(270deg);
 }
 .side-slider .fa-solid {

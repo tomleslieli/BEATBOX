@@ -2,6 +2,7 @@
 let trackName = "";
 let hotCue01 = 0;
 let hotCue02 = 0;
+let originalVolume = 0;
 let totalDuration01;
 let totalDuration02;
 let loop = {
@@ -61,6 +62,7 @@ clearTrack.addEventListener("click", () => {
     trackName = ""
     document.getElementById('track-name').innerText = "Track: ";
     document.getElementById('current').innerText = "00:00 / 00:00";
+    document.getElementById('bpm').innertext ="1x";
 });
 
 // WAVEFORM VIEW ///////////////////////////////////////////////////////////
@@ -87,11 +89,34 @@ const volSlider = document.querySelector(".vol-slider")
 volSlider.addEventListener("input", () => {
     modVol(volSlider.value);
 })
-
+const muteVol = document.querySelector(".mute")
+const muted = document.querySelector(".muted")
+muteVol.addEventListener("click", () => {
+    if (!audioTrack.getMute()) {
+        originalVolume = audioTrack.getVolume();
+        audioTrack.setMute(true);
+        muteVol.classList.add("clicked");
+        muted.classList.add("clicked");
+        volSlider.value = 0;
+    } 
+});
+muted.addEventListener("click", () => {
+    if (audioTrack.getMute()){
+    audioTrack.setMute(false);
+    muteVol.classList.remove("clicked");
+    muted.classList.remove("clicked");
+    volSlider.value = originalVolume;
+    }
+})
 //SPEED SLIDER /////////////////////////////////////////////////////////////
 const rateSlider = document.querySelector(".rate-slider")
 rateSlider.addEventListener("input", () => {
     audioTrack.setPlaybackRate(rateSlider.value)
+})
+const speed = document.querySelector(".speed")
+speed.addEventListener("click", () => {
+    audioTrack.setPlaybackRate(1)
+    rateSlider.value = 1;
 })
 
 // HOTCUES /////////////////////////////////////////////////////////////////

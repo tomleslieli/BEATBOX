@@ -328,7 +328,7 @@ input[id=track-speed] {
   display: inline-block;
   position: relative;
   top: 3px;
-  left: 40px;
+  left: 30px;
   cursor: pointer;
 }
 
@@ -417,7 +417,12 @@ button {
 
 .loop-in {
   position: relative;
-  left: -8px;
+  left: -20px;
+}
+
+.loop-out {
+  position: relative;
+  left: -5px;
 }
 
 :hover.loop-in {
@@ -508,7 +513,19 @@ button {
   cursor: pointer;
 }
 
-.speed {
+.mute.clicked {
+  display: none;
+}
+
+.muted {
+  display: none;
+}
+
+.muted.clicked {
+  display: inline-block;
+}
+
+.speed-button {
   display: inline-block;
   position: relative;
   left: -296px;

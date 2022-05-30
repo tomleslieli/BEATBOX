@@ -1,9 +1,25 @@
-// SPLASH SCREEN
+// DEFAULTS ////////////////////////////////////////////////////////////////
+let trackName = "";
+let hotCue01 = 0;
+let hotCue02 = 0;
+let totalDuration01;
+let totalDuration02;
+let loop = {
+    in: 0,
+    out: 0,
+    looped: false
+};
+
+// SPLASH SCREEN ///////////////////////////////////////////////////////////
 const splashScreen = document.querySelector(".splash")
 splashScreen.addEventListener("click", () => {
-    splashScreen.classList.add("clicked")
+    splashScreen.classList.add("clicked");
+    setTimeout(function(){
+        splashScreen.classList.add("splashed");
+    }, 1500);
 })
-// LOADING & CLEARING TRACKS
+
+// LOADING & CLEARING TRACKS ///////////////////////////////////////////////
 let audioTrack = WaveSurfer.create({
     container: '.player',
     waveColor: 'rgb(151, 210, 235)',
@@ -16,7 +32,7 @@ let audioTrack = WaveSurfer.create({
     scrollParent: true,
     hideScrollbar: true
 });
-const clearTrack = document.querySelector(".clear")
+const loadFile = document.querySelector(".upload-file")
 document.getElementById("upload-file").addEventListener("change", function(e){
     let newFile = this.files[0];
     if (newFile) {
@@ -26,31 +42,34 @@ document.getElementById("upload-file").addEventListener("change", function(e){
             let track = new window.Blob([new Uint8Array(el.target.result)]);
             audioTrack.loadBlob(track);
         };
+        trackName = newFile.name
+        document.getElementById('track-name').innerText = "Track: " + trackName;
         file.readAsArrayBuffer(newFile);
         audioTrack.load(file);
-        playButton.classList.remove("playing")
+
+        if (playButton.classList.contains("playing")){
+            playButton.classList.remove("playing")
+        }
     }
 }, false);
+const clearTrack = document.querySelector(".clear")
 clearTrack.addEventListener("click", () => {
+    audioTrack.stop();
     audioTrack.empty();
-    playButton.classList.remove("playing")
-})
-// DEFAULTS
-let hotCue01 = 0;
-let hotCue02 = 0;
-let totalDuration01;
-let totalDuration02;
-let loop = {
-    in: 0,
-    out: 0,
-    looped: false
-};
-// WAVEFORM VIEW
+    audioTrack.unAll();
+    playButton.classList.remove("playing");
+    trackName = ""
+    document.getElementById('track-name').innerText = "Track: ";
+    document.getElementById('current').innerText = "00:00 / 00:00";
+});
+
+// WAVEFORM VIEW ///////////////////////////////////////////////////////////
 const toggleView = document.querySelector(".toggle")
 toggleView.addEventListener("click", () => {
     audioTrack.toggleScroll();
 })
-// PLAY / STOP BUTTONS
+
+// PLAY / STOP BUTTONS /////////////////////////////////////////////////////
 const playButton = document.querySelector(".play-button")
 const stopButton = document.querySelector(".stop-button")
 playButton.addEventListener("click", () => {
@@ -59,7 +78,8 @@ playButton.addEventListener("click", () => {
 stopButton.addEventListener("click", () => {
     stopPlayback();
 })
-// VOL SLIDER
+
+// VOL SLIDER //////////////////////////////////////////////////////////////
 const modVol = (vol) => {
     audioTrack.setVolume(vol);
 }
@@ -67,12 +87,14 @@ const volSlider = document.querySelector(".vol-slider")
 volSlider.addEventListener("input", () => {
     modVol(volSlider.value);
 })
-//SPEED SLIDER
+
+//SPEED SLIDER /////////////////////////////////////////////////////////////
 const rateSlider = document.querySelector(".rate-slider")
 rateSlider.addEventListener("input", () => {
     audioTrack.setPlaybackRate(rateSlider.value)
 })
-// HOTCUES
+
+// HOTCUES /////////////////////////////////////////////////////////////////
 const hotCueOne = document.querySelector(".hot-cue-1")
 const hotCueTwo = document.querySelector(".hot-cue-2")
 const resetCueOne = document.querySelector(".reset-cue-1")
@@ -121,7 +143,8 @@ resetCueTwo.addEventListener("click", () => {
         hotCue02 = 0;
     }
 })
-// LOOP
+
+// LOOP ////////////////////////////////////////////////////////////////////
 const loopIn = document.querySelector(".loop-in")
 const loopOut = document.querySelector(".loop-out")
 const clearLoop = document.querySelector(".clear-loop")
@@ -158,7 +181,8 @@ clearLoop.addEventListener("click", () => {
         loop.in = 0;
         loop.out = 0;
 })
-// PLAYBACK HELPER FUNCTIONS
+
+// PLAYBACK HELPER FUNCTIONS /////////////////////////////////////////////
 function startPlayback(){
     audioTrack.playPause();
     if (audioTrack.isPlaying()){
@@ -177,7 +201,8 @@ function stopPlayback(){
     document.getElementById('current').innerText = "00:00 / " + totalTime;
     }
 }
-// TIMECODE RELATED
+
+// TIMECODE RELATED //////////////////////////////////////////////////////
 audioTrack.on('audioprocess', function() {
     if (audioTrack.isPlaying()) {
         const trackDuration = audioTrack.getDuration();

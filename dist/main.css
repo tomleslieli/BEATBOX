@@ -22,7 +22,7 @@ header {
 }
 
 .splash {
-  z-index: 6;
+  z-index: 10;
   background-size: 100%;
   font-family: monospace;
   margin: none;
@@ -43,6 +43,14 @@ header {
 }
 
 .splash.clicked {
+  visibility: visible;
+  opacity: 0;
+  filter: blur(30px);
+  transition: visbility 0s 2s, opacity 1s linear;
+}
+
+.splash.splashed {
+  visibility: hidden;
   display: none;
 }
 
@@ -91,7 +99,7 @@ header {
   font-weight: bold;
   font-size: 10px;
   width: 19%;
-  height: 25%;
+  height: 24px;
   max-height: 40px;
   box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
   background-color: rgb(151, 210, 235);
@@ -100,6 +108,7 @@ header {
   overflow: hidden;
   position: relative;
   left: 3px;
+  cursor: default;
 }
 
 .waveform {
@@ -112,17 +121,21 @@ header {
   padding: 5px 25px;
   margin-right: 3px;
   border-radius: 25px;
+  margin-left: 7.5px;
+  display: flex;
+  justify-content: center;
 }
 
 .bpm-container {
   position: relative;
-  left: 125px;
+  left: 115px;
   top: -47px;
   padding-left: 10px;
   height: 22px;
-  width: 50px;
+  width: 40%;
   background-color: rgb(151, 210, 235);
   border-radius: 10px;
+  margin-right: 90%;
 }
 
 .bpm {
@@ -130,25 +143,28 @@ header {
   color: aliceblue;
   position: relative;
   left: -5px;
-  top: 4.5px;
+  top: -7.5px;
   display: flex;
   justify-content: center;
+  cursor: default;
 }
 
 .wave-text {
   margin: 0;
   padding: 0;
   display: inline-block;
-  z-index: 5;
+  z-index: 6;
   position: relative;
   color: aliceblue;
   top: -5.5px;
   left: 12px;
   font-size: 11px;
   font-weight: bold;
+  cursor: default;
 }
 
 .wave-text-background {
+  z-index: 6;
   background-color: rgb(151, 210, 235);
   border-radius: 10px;
   max-height: 22px;
@@ -188,7 +204,7 @@ header {
   display: inline-block;
   position: relative;
   left: 10px;
-  top: -21px;
+  top: -22px;
   width: 55px;
   height: 35px;
   background-color: rgb(151, 210, 235);
@@ -209,12 +225,7 @@ header {
 /* TOP BOX */
 .track-info .track-name {
   position: relative;
-  top: -1px;
-  left: -7px;
-}
-
-.track-info .artist-name {
-  position: relative;
+  top: -3.5px;
   left: -7px;
 }
 
@@ -317,7 +328,7 @@ input[id=track-speed] {
   display: inline-block;
   position: relative;
   top: 3px;
-  left: 7px;
+  left: 40px;
   cursor: pointer;
 }
 
@@ -341,7 +352,7 @@ input[id=track-speed] {
 .hot-cues {
   display: inline-block;
   position: relative;
-  left: 17px;
+  left: 67px;
   top: -16px;
   cursor: pointer;
 }
@@ -401,7 +412,7 @@ button {
   padding: 0;
   border: none;
   top: -41px;
-  left: -154px;
+  left: -124px;
 }
 
 .loop-in {
@@ -447,4 +458,83 @@ button {
 
 .loop-out.clicked {
   color: rgb(151, 210, 235);
+}
+
+.empty-space {
+  background-color: black;
+  display: inline-block;
+  position: relative;
+}
+
+.bpm-container {
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  top: -35px;
+}
+
+.playheads {
+  margin-top: 10px;
+  width: 35%;
+  height: 5px;
+  padding: 5px 25px;
+  margin-right: 3px;
+  border-radius: 25px;
+  margin-left: 7.5px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.fa-solid.fa-sort-down {
+  z-index: 5;
+  color: rgb(151, 210, 235);
+  position: fixed;
+  top: 120px;
+}
+
+.fa-solid.fa-sort-up {
+  z-index: 5;
+  color: rgb(151, 210, 235);
+  position: fixed;
+  top: 222px;
+}
+
+.vol {
+  display: inline-block;
+  position: relative;
+  left: -301px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.speed {
+  display: inline-block;
+  position: relative;
+  left: -296px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.track-a-id {
+  display: inline-block;
+  position: relative;
+  color: aliceblue;
+  width: 65px;
+  height: 30px;
+  border-radius: 30px;
+  left: -407.5px;
+  top: 10px;
+}
+
+.track-a-id h4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -10px;
+  font-size: 13px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: default;
 }

@@ -10,11 +10,11 @@ BeatBox is a free, open source four-channel DJ application. Suited for both begi
 
 Skip out on the $1000+ cost of software / hardware ( not to mention carrying around those pesky USBs). With BeatBox, users are able to source music directly from their Spotify playlists!
 
-BeatBox utilizes third-party components such as Spotify API, Wavesurfer.js, and Font-Awesome stylesheets. For more information on these awesome tools, find out more here:
+BeatBox utilizes third-party components such as Wavesurfer.js, Pure-knob & Font-Awesome stylesheets, and . For more information on these awesome tools, find out more here:
 
-https://developer.spotify.com/
 https://wavesurfer-js.org/
 https://fontawesome.com/
+https://github.com/andrepxx/pure-knob/
 
 Roadmap:
 

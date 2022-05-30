@@ -52,100 +52,102 @@
             </div>
         </header>
         <br><br>
-        <div class="info-and-tag">
-            <div class="track-info">
-                <div class="track-name">
-                    <p id="track-name">Track: </p> 
-                </div>
-            </div>
-            <div class="upload">
-                <label for="upload-file">Load
-                    <input id="upload-file" type="file" style="visibility:hidden;" accept=".mp3, .wav">
-                </label>
-            </div>
-            <div class="clear-track">
-                <button class="clear">Clear</button>
-            </div>
-        </div>
-        <div class = "waveform-slider">
-            <div class="waveform">  
-                <div class ="wave-text-background">
-                    <div class= "wave-text">
-                        <p id="current" class="current">00:00 / 00:00</p>
-                    </div>
-                    <div class="bpm-container">
-                        <p id="bpm" class="bpm">1x</p>
+        <div class="audio-track-a">
+            <div class="info-and-tag">
+                <div class="track-info">
+                    <div class="track-name">
+                        <p id="track-name">Track: </p> 
                     </div>
                 </div>
-                
-                <div class="player-box">
-                    <div class="player" id="waveform"></div>
+                <div class="upload">
+                    <label for="upload-file">Load
+                        <input id="upload-file" type="file" style="visibility:hidden;" accept=".mp3, .wav">
+                    </label>
                 </div>
-                <div class="toggle-view">
-                    <button class="toggle">Toggle View</button>
+                <div class="clear-track">
+                    <button class="clear">Clear</button>
                 </div>
             </div>
-            <div class="side-slider">
-                <input class="vol-slider" id="track-range" type="range" min="0" max="1"
-                    step="0.005" value="0.5">
-                <input class="rate-slider" id="track-speed" type="range" min=".75" max="1.25"
-                step="0.005" value="1">
-            </div>
-            <div class="vol">
-                <span class="mute">
-                    <i class="fa-solid fa-volume-high"></i>
-                </span>
-                <span class ="muted">
-                    <i class="fa-solid fa-volume-xmark"></i>
-                </span>
-            </div>
-            <div class="speed-button">
-                <span class="speed">
-                <i class="fa-solid fa-gauge"></i>
-                </span>
-            </div>
-            <div class="track-a-id">
-                <h4> A </h4>
-            </div>
-        </div>
-        <div class="under-wave">
-            <div class="audio-buttons">
-                <span class="play-button button ">
-                    <i class="fa-regular fa-circle-play fa-3x"></i>
-                    <i class="fa-regular fa-circle-pause fa-3x"></i>
-                </span>
-                <span class="stop-button button">
-                    <i class="fa-regular fa-circle-stop fa-3x"></i>
-                </span>
-            </div>
-            <div class="hot-cues">
-                <span class="hot-cue-1 button">
-                    <i class="fa-solid fa-1 fa-2x"></i>
-                </span>
-                <span class="hot-cue-2 button">
-                    <i class="fa-solid fa-2 fa-2x"></i>
-                </span>
-                <div class="reset-cues">
-                    <span class="reset-cue-1">
-                        <i class="fa-solid fa-rotate-left"></i>
+            <div class = "waveform-slider">
+                <div class="waveform">  
+                    <div class ="wave-text-background">
+                        <div class= "wave-text">
+                            <p id="current" class="current">00:00 / 00:00</p>
+                        </div>
+                        <div class="bpm-container">
+                            <p id="bpm" class="bpm">1x</p>
+                        </div>
+                    </div>
+                    
+                    <div class="player-box">
+                        <div class="player" id="waveform"></div>
+                    </div>
+                    <div class="toggle-view">
+                        <button class="toggle">Toggle View</button>
+                    </div>
+                </div>
+                <div class="side-slider">
+                    <input class="vol-slider" id="track-range" type="range" min="0" max="1"
+                        step="0.005" value="0.5">
+                    <input class="rate-slider" id="track-speed" type="range" min=".75" max="1.25"
+                    step="0.005" value="1">
+                </div>
+                <div class="vol">
+                    <span class="mute">
+                        <i class="fa-solid fa-volume-high"></i>
                     </span>
-                    <span class="reset-cue-2">
-                        <i class="fa-solid fa-rotate-left"></i>
+                    <span class ="muted">
+                        <i class="fa-solid fa-volume-xmark"></i>
                     </span>
                 </div>
-                <div class = "empty-space"></div>
+                <div class="speed-button">
+                    <span class="speed">
+                    <i class="fa-solid fa-gauge"></i>
+                    </span>
+                </div>
+                <div class="track-a-id">
+                    <h4> A </h4>
+                </div>
             </div>
-            <div class="looper">
-                <button class="loop-in">In</button>
-                <button class="loop-out">Out</button>
-                <button class="clear-loop">Clear</button>
+            <div class="under-wave">
+                <div class="audio-buttons">
+                    <span class="play-button button ">
+                        <i class="fa-regular fa-circle-play fa-3x"></i>
+                        <i class="fa-regular fa-circle-pause fa-3x"></i>
+                    </span>
+                    <span class="stop-button button">
+                        <i class="fa-regular fa-circle-stop fa-3x"></i>
+                    </span>
+                </div>
+                <div class="hot-cues">
+                    <span class="hot-cue-1 button">
+                        <i class="fa-solid fa-1 fa-2x"></i>
+                    </span>
+                    <span class="hot-cue-2 button">
+                        <i class="fa-solid fa-2 fa-2x"></i>
+                    </span>
+                    <div class="reset-cues">
+                        <span class="reset-cue-1">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </span>
+                        <span class="reset-cue-2">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </span>
+                    </div>
+                    <div class = "empty-space"></div>
+                </div>
+                <div class="looper">
+                    <button class="loop-in">In</button>
+                    <button class="loop-out">Out</button>
+                    <button class="clear-loop">Clear</button>
+                </div>
             </div>
-        </div>
 
-        <div class="parent-playhead"></div>
-            <div class ="playheads">
-                <i class="fa-solid fa-sort-down"></i>
-                <i class="fa-solid fa-sort-up"></i>
+            <div class="parent-playhead">
+                <span class ="playheads">
+                    <i class="fa-solid fa-sort-down"></i>
+                    <i class="fa-solid fa-sort-up"></i>
+                </span>
             </div>
         </div>
         <footer>

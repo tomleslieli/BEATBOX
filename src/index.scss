@@ -1,3 +1,4 @@
+// GENERAL ////////////////////////////////////////
 body {
     margin: none;
     padding: none;
@@ -75,11 +76,12 @@ header {
 .logo img {
     width: 25%;
 }
-/* BOTH BOXES */
-.info-and-tag {
+
+// AUDIO TRACK A ////////////////////////////////////////
+.audio-track-a .info-and-tag {
     white-space: nowrap;
 }
-.track-info {
+.audio-track-a .track-info {
     display: inline-block;
     font-family: sans-serif;
     color: aliceblue;
@@ -97,7 +99,7 @@ header {
     left: 3px;
     cursor:default;
 }
-.waveform {
+.audio-track-a .waveform {
     margin-top: 10px;
     z-index: 1;
     background: rgb(249, 222, 187);
@@ -111,8 +113,7 @@ header {
     display: flex;
     justify-content: center;
 }
-
-.bpm-container {
+.audio-track-a .bpm-container {
     position: relative;
     left: 115px;
     top: -47px;
@@ -123,7 +124,7 @@ header {
     border-radius: 10px;
     margin-right: 90%;
 }
-.bpm {
+.audio-track-a .bpm {
     font-size: 12px;
     color: aliceblue;
     position: relative;
@@ -133,7 +134,7 @@ header {
     justify-content: center;
     cursor:default;
 }
-.wave-text {
+.audio-track-a .wave-text {
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -146,7 +147,7 @@ header {
     font-weight: bold;
     cursor:default;
 }
-.wave-text-background {
+.audio-track-a .wave-text-background {
     z-index: 6;
     background-color: rgb(151, 210, 235);
     border-radius: 10px;
@@ -156,7 +157,7 @@ header {
     margin-left: -9px;
     margin-right: -9px;
 }
-.upload {
+.audio-track-a .upload {
     position: relative;
     display: inline-block;
     top: -20px;
@@ -174,13 +175,13 @@ header {
     box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
     cursor: pointer;
 }
-.upload label {
+.audio-track-a .upload label {
     position: relative;
     left: 15px;
     top: 6px;
     cursor: pointer;
 }
-.clear-track {
+.audio-track-a .clear-track {
     display: inline-block;
     position: relative;
     left: 10px;
@@ -191,7 +192,7 @@ header {
     box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
     border-radius: 30px;
 }
-.clear-track .clear {
+.audio-track-a .clear-track .clear {
     position: relative;
     font-family: sans-serif;
     color: aliceblue;
@@ -201,12 +202,12 @@ header {
     top: 8px;
 }
 /* TOP BOX */
-.track-info .track-name {
+.audio-track-a .track-info .track-name {
     position: relative;
     top: -3.5px;
     left: -7px;
 }
-.wave-text-background {
+.audio-track-a .wave-text-background {
     background-color: rgb(151, 210, 235);
     border-radius: 10px;
     max-height: 22px;
@@ -215,18 +216,18 @@ header {
     margin-left: -9px;
     margin-right: -9px;
 }
-.waveform-slider {
+.audio-track-a .waveform-slider {
     white-space: nowrap;
     position: relative;
     top: -25px;
 }
-.waveform-slider .waveform {
+.audio-track-a .waveform-slider .waveform {
     display: inline-block;
 }
-.waveform-slider .side-slider {
+.audio-track-a .waveform-slider .side-slider {
     display: inline-block;
 }
-.player {
+.audio-track-a .player {
     z-index: 3;
     position: relative;
     top: 0px;
@@ -234,13 +235,13 @@ header {
     min-width: 100px;
 }
 /* VOLUME-SLIDER-RELATED */
-.side-slider {
+.audio-track-a .side-slider {
     transform-origin: top left;
     position: relative;
     left: -65px;
     top: -43px
 }
-.side-slider #track-range {
+.audio-track-a .side-slider #track-range {
     width: 140px;
     appearance: none;
     background:rgb(249, 222, 187);
@@ -248,7 +249,7 @@ header {
     padding: 1px;
     border-radius: 10px;
 }
-.side-slider #track-range::-webkit-slider-thumb{
+.audio-track-a .side-slider #track-range::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
@@ -258,10 +259,10 @@ header {
     border-radius: 20px;
     cursor: pointer;
 }
-input[id="track-range"] {
+.audio-track-a input[id="track-range"] {
     transform: rotate(270deg);
  }
-.side-slider #track-speed {
+ .audio-track-a .side-slider #track-speed {
     width: 140px;
     appearance: none;
     background:rgb(249, 222, 187);
@@ -271,7 +272,7 @@ input[id="track-range"] {
     position: relative;
     left: -125px;
 }
-.side-slider #track-speed::-webkit-slider-thumb{
+.audio-track-a .side-slider #track-speed::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
@@ -281,14 +282,14 @@ input[id="track-range"] {
     border-radius: 20px;
     cursor: pointer;
 }
-input[id="track-speed"] {
+.audio-track-a input[id="track-speed"] {
     transform: rotate(270deg);
 }
-.side-slider .fa-solid {
+.audio-track-a .side-slider .fa-solid {
     position: relative;
     left: -50px;
 }
-.audio-buttons {
+.audio-track-a .audio-buttons {
      display: inline-block;
      position: relative;
      top: 3px;
@@ -296,56 +297,56 @@ input[id="track-speed"] {
      cursor: pointer;
 
  }
-.audio-buttons .play-button .fa-circle-pause {
+ .audio-track-a .audio-buttons .play-button .fa-circle-pause {
     display: none;
 }
-.audio-buttons .play-button.playing .fa-circle-pause {
+.audio-track-a .audio-buttons .play-button.playing .fa-circle-pause {
     display: inline-block;
     color:rgb(151, 210, 235);
 }
-.audio-buttons .play-button.playing .fa-circle-play {
+.audio-track-a .audio-buttons .play-button.playing .fa-circle-play {
     display: none;
 }
-.fa-regular {
+.audio-track-a .fa-regular {
     color: rgb(249, 222, 187);
  }
-.hot-cues {
+ .audio-track-a .hot-cues {
     display: inline-block;
     position: relative;
     left: 67px;
     top: -16px;
     cursor: pointer;
 }
-.hot-cues .hot-cue-2 {
+.audio-track-a .hot-cues .hot-cue-2 {
     position: relative;
     left: 10px;
 }
-.hot-cues .hot-cue-1.clicked .fa-solid {
+.audio-track-a .hot-cues .hot-cue-1.clicked .fa-solid {
     color:rgb(151, 210, 235);
 }
-.hot-cues .hot-cue-2.clicked .fa-solid {
+.audio-track-a .hot-cues .hot-cue-2.clicked .fa-solid {
     color:rgb(151, 210, 235);
 }
-.fa-solid {
+.audio-track-a .fa-solid {
     color: rgb(249, 222, 187);
  }
- .reset-cues {
+ .audio-track-a  .reset-cues {
      display: inline-block;
      position: relative;
      left: -41px;
      top: 22px;
  }
- .reset-cues .reset-cue-2 {
+ .audio-track-a  .reset-cues .reset-cue-2 {
     position: relative;
     left: 12.5px;
  }
-:hover.fa-regular{
+ .audio-track-a :hover.fa-regular{
     color:rgb(255, 202, 175);
 }
-:hover.fa-solid{
+.audio-track-a :hover.fa-solid{
     color:rgb(255, 202, 175);
 }
-button {
+.audio-track-a button {
     border-radius: 5px;
     color: rgb(249, 222, 187);
     font-family: monospace;
@@ -358,7 +359,7 @@ button {
     border: none;
 
 }
-.looper {
+.audio-track-a .looper {
     display: inline-block;
     position: relative;
     padding: 0;
@@ -366,62 +367,59 @@ button {
     top: -41px;
     left: -124px;
 }
-.loop-in {
+.audio-track-a .loop-in {
     position: relative;
     left: -20px;
 }
-.loop-out {
+.audio-track-a .loop-out {
     position: relative;
     left: -5px;
 }
-:hover.loop-in {
+.audio-track-a :hover.loop-in {
     color:rgb(255, 202, 175);
 }
-:hover.loop-out {
+.audio-track-a :hover.loop-out {
     color:rgb(255, 202, 175); 
 }
-.clear-loop {
+.audio-track-a .clear-loop {
     position: relative;
     left: 7px;
 }
-:hover.clear-loop {
+.audio-track-a :hover.clear-loop {
     color:rgb(255, 202, 175);
 }
-.toggle {
-    color: rgb(254, 240, 225);
-}
-.toggle {
+.audio-track-a .toggle {
     color: rgb(254, 240, 225);
     position: relative;
-    top: 2px;
+    top: 5px;
     left: -5px;
 }
-:hover.toggle {
+.audio-track-a :hover.toggle {
     color:rgb(255, 202, 175);
 }
-.loop-in.clicked {
+.audio-track-a .loop-in.clicked {
     color: rgb(151, 210, 235)
 }
-.loop-out.clicked {
+.audio-track-a .loop-out.clicked {
     color: rgb(151, 210, 235)
 }
-.clear-loop {
+.audio-track-a .clear-loop {
 
 }
-.empty-space {
+.audio-track-a .empty-space {
     background-color: black;
     display: inline-block;
     position: relative;
 
 }
-.bpm-container {
+.audio-track-a .bpm-container {
     z-index: 8;
     display: flex;
     justify-content: center;
     top: -35px;
 
 }
-.playheads {
+.audio-track-a .playheads {
     margin-top: 10px;
     width: 35%;
     height: 5px;
@@ -433,57 +431,56 @@ button {
     justify-content: center;
     position: relative;
 }
-.fa-solid.fa-sort-down {
+.audio-track-a .playheads.clicked {
+    display: none;
+}
+.audio-track-a .fa-solid.fa-sort-down {
     z-index: 5;
     color: rgb(151, 210, 235);
     position: fixed;
     top: 120px;
 
 }
-
-.fa-solid.fa-sort-up {
+.audio-track-a .fa-solid.fa-sort-up {
     z-index: 5;
     color: rgb(151, 210, 235);
     position: fixed;
-    top: 222px;
+    top: 224px;
 }
-
-.vol {
+.audio-track-a .vol {
     display: inline-block;
     position: relative;
     left: -301px;
     top: 40px;
     cursor: pointer;
 }
-
-.mute.clicked {
+.audio-track-a .mute.clicked {
     display: none;
 }
-.muted {
+.audio-track-a .muted {
     display: none;
 }
-.muted.clicked {
+.audio-track-a .muted.clicked {
     display: inline-block;
 }
-
-.speed-button {
+.audio-track-a .speed-button {
     display: inline-block;
     position: relative;
     left: -296px;
     top: 40px;
     cursor: pointer;
 }
-.track-a-id {
+.audio-track-a .track-a-id {
     display: inline-block;
     position: relative;
     color: aliceblue;
     width: 65px;
     height: 30px;
     border-radius: 30px;
-    left: -407.5px;
-    top: 10px;
+    left: -405.5px;
+    top: 12px;
 }
-.track-a-id h4 {
+.audio-track-a .track-a-id h4 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -494,3 +491,4 @@ button {
     font-weight: bold;
     cursor:default;
 }
+// AUDIO TRACK B ////////////////////////////////////////

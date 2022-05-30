@@ -47,7 +47,11 @@ document.getElementById("upload-file").addEventListener("change", function(e){
         document.getElementById('track-name').innerText = "Track: " + trackName;
         file.readAsArrayBuffer(newFile);
         audioTrack.load(file);
-
+        let currSec = audioTrack.getCurrentTime();
+        let currTime = timeafy(currSec)
+        let totalSec = audioTrack.getDuration();
+        let totalTime = timeafy(totalSec)
+        document.getElementById('current').innerText = currTime + " / " + totalTime;
         if (playButton.classList.contains("playing")){
             playButton.classList.remove("playing")
         }
@@ -67,8 +71,14 @@ clearTrack.addEventListener("click", () => {
 
 // WAVEFORM VIEW ///////////////////////////////////////////////////////////
 const toggleView = document.querySelector(".toggle")
+const playheads = document.querySelector(".playheads")
 toggleView.addEventListener("click", () => {
     audioTrack.toggleScroll();
+    if (!playheads.classList.contains("clicked")){
+    playheads.classList.add("clicked")
+    } else {
+        playheads.classList.remove("clicked");
+    }
 })
 
 // PLAY / STOP BUTTONS /////////////////////////////////////////////////////

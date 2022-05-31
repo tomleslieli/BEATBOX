@@ -479,4 +479,16 @@ nightMode.addEventListener("click", () => {
 
         nightModeOn = false;
     }
+
+})
+
+const helpButton = document.querySelector(".help-btn");
+const help = document.querySelector(".help");
+
+helpButton.addEventListener("click", () => {
+    if (!help.classList.contains("clicked")){
+        help.classList.add("clicked");
+    } else {
+        help.classList.remove("clicked");
+    }
 })

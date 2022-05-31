@@ -35,7 +35,7 @@ header {
 }
 
 .splash {
-  z-index: 10;
+  z-index: 12;
   background-size: 100%;
   font-family: monospace;
   margin: none;
@@ -1608,6 +1608,7 @@ footer {
 }
 
 .bar {
+  z-index: 9;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1704,4 +1705,25 @@ li {
 
 .about-text > p {
   margin-bottom: -30px;
+}
+
+.help {
+  display: none;
+  opacity: 0%;
+}
+
+.help > img {
+  z-index: 10;
+  position: absolute;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.help.clicked {
+  display: block;
+  opacity: 100%;
+}
+
+.plshelp {
+  color: aliceblue;
 }

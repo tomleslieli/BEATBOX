@@ -823,6 +823,7 @@ button {
   color: rgb(151, 210, 235);
   position: fixed;
   top: 169px;
+  margin-left: 12px;
 }
 
 .playheads-0 .fa-solid.fa-sort-up {
@@ -830,6 +831,7 @@ button {
   color: rgb(151, 210, 235);
   position: fixed;
   top: 277px;
+  margin-left: 12px;
 }
 
 .playheads-1 .fa-solid.fa-sort-down {
@@ -837,6 +839,7 @@ button {
   color: rgb(151, 210, 235);
   position: fixed;
   top: 169px;
+  margin-left: 12px;
 }
 
 .playheads-1 .fa-solid.fa-sort-up {
@@ -844,6 +847,7 @@ button {
   color: rgb(151, 210, 235);
   position: fixed;
   top: 277px;
+  margin-left: 12px;
 }
 
 .playheads-2 .fa-solid.fa-sort-down {
@@ -851,6 +855,7 @@ button {
   color: rgb(151, 210, 235);
   position: fixed;
   top: 453px;
+  margin-left: 12px;
 }
 
 .playheads-2 .fa-solid.fa-sort-up {
@@ -858,6 +863,7 @@ button {
   color: rgb(151, 210, 235);
   position: fixed;
   top: 561px;
+  margin-left: 12px;
 }
 
 .playheads-3 .fa-solid.fa-sort-down {
@@ -865,6 +871,7 @@ button {
   color: rgb(151, 210, 235);
   position: fixed;
   top: 453px;
+  margin-left: 12px;
 }
 
 .playheads-3 .fa-solid.fa-sort-up {
@@ -872,6 +879,7 @@ button {
   color: rgb(151, 210, 235);
   position: fixed;
   top: 561px;
+  margin-left: 12px;
 }
 
 .vol-0 {

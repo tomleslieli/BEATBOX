@@ -1,6 +1,14 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 body {
   margin: none;
   padding: none;
@@ -9,8 +17,8 @@ body {
 
 header {
   display: inline-block;
-  padding: none;
-  margin: none;
+  padding: 10px;
+  margin: 10px;
   min-width: 700px;
 }
 
@@ -87,11 +95,11 @@ header {
   width: 25%;
 }
 
-.audio-track-a .info-and-tag {
+.info-and-tag {
   white-space: nowrap;
 }
 
-.audio-track-a .track-info {
+.track-info {
   display: inline-block;
   font-family: sans-serif;
   color: aliceblue;
@@ -110,24 +118,38 @@ header {
   cursor: default;
 }
 
-.audio-track-a .waveform {
+.a-b {
+  display: flex;
+  justify-content: space-around;
+}
+
+.c-d {
+  display: flex;
+  justify-content: space-around;
+}
+
+.side-slider {
+  width: -1px;
+}
+
+.waveform {
   margin-top: 10px;
   z-index: 1;
   background: rgb(249, 222, 187);
-  width: 35%;
+  width: 90%;
   height: 130px;
   box-shadow: 0 5px 5px -4px rgba(12, 248, 252, 0.3);
-  padding: 5px 25px;
-  margin-right: 3px;
+  padding: 5px 3%;
+  margin-right: 2.8%;
   border-radius: 25px;
-  margin-left: 7.5px;
+  margin-left: 1%;
   display: flex;
   justify-content: center;
 }
 
-.audio-track-a .bpm-container {
+.bpm-container {
   position: relative;
-  left: 115px;
+  left: 120px;
   top: -47px;
   padding-left: 10px;
   height: 22px;
@@ -137,18 +159,18 @@ header {
   margin-right: 90%;
 }
 
-.audio-track-a .bpm {
-  font-size: 12px;
+.bpm {
+  font-size: 11px;
   color: aliceblue;
   position: relative;
-  left: -5px;
-  top: -7.5px;
+  left: -6px;
+  top: -6.5px;
   display: flex;
   justify-content: center;
   cursor: default;
 }
 
-.audio-track-a .wave-text {
+.wave-text {
   margin: 0;
   padding: 0;
   display: inline-block;
@@ -162,22 +184,11 @@ header {
   cursor: default;
 }
 
-.audio-track-a .wave-text-background {
-  z-index: 6;
-  background-color: rgb(151, 210, 235);
-  border-radius: 10px;
-  max-height: 22px;
-  max-width: 110px;
-  margin-top: 8px;
-  margin-left: -9px;
-  margin-right: -9px;
-}
-
-.audio-track-a .upload {
+.upload {
   position: relative;
   display: inline-block;
   top: -20px;
-  left: 7px;
+  left: 9px;
   border: 0px;
   font-family: sans-serif;
   font-weight: bold;
@@ -192,14 +203,14 @@ header {
   cursor: pointer;
 }
 
-.audio-track-a .upload label {
+.upload label {
   position: relative;
   left: 15px;
   top: 6px;
   cursor: pointer;
 }
 
-.audio-track-a .clear-track {
+.clear-track {
   display: inline-block;
   position: relative;
   left: 10px;
@@ -211,7 +222,7 @@ header {
   border-radius: 30px;
 }
 
-.audio-track-a .clear-track .clear {
+.clear-track .clear-0 {
   position: relative;
   font-family: sans-serif;
   color: aliceblue;
@@ -221,38 +232,73 @@ header {
   top: 8px;
 }
 
-/* TOP BOX */
-.audio-track-a .track-info .track-name {
+.clear-track .clear-1 {
+  position: relative;
+  font-family: sans-serif;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 10px;
+  left: 15px;
+  top: 8px;
+}
+
+.clear-track .clear-2 {
+  position: relative;
+  font-family: sans-serif;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 10px;
+  left: 15px;
+  top: 8px;
+}
+
+.clear-track .clear-3 {
+  position: relative;
+  font-family: sans-serif;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 10px;
+  left: 15px;
+  top: 8px;
+}
+
+.track-info {
+  position: relative;
+  left: 8px;
+  min-width: 35%;
+}
+
+.track-info .track-name {
   position: relative;
   top: -3.5px;
   left: -7px;
 }
 
-.audio-track-a .wave-text-background {
+.wave-text-background {
   background-color: rgb(151, 210, 235);
   border-radius: 10px;
   max-height: 22px;
   max-width: 110px;
   margin-top: 8px;
-  margin-left: -9px;
+  margin-left: 10px;
   margin-right: -9px;
 }
 
-.audio-track-a .waveform-slider {
+.waveform-slider {
   white-space: nowrap;
   position: relative;
   top: -25px;
 }
 
-.audio-track-a .waveform-slider .waveform {
+.waveform-slider .waveform {
   display: inline-block;
 }
 
-.audio-track-a .waveform-slider .side-slider {
+.waveform-slider .side-slider {
   display: inline-block;
 }
 
-.audio-track-a .player {
+.player {
   z-index: 3;
   position: relative;
   top: 0px;
@@ -260,15 +306,29 @@ header {
   min-width: 100px;
 }
 
-/* VOLUME-SLIDER-RELATED */
-.audio-track-a .side-slider {
+.side-slider {
   transform-origin: top left;
   position: relative;
   left: -65px;
   top: -43px;
 }
 
-.audio-track-a .side-slider #track-range {
+.vol-slider-1 {
+  position: relative;
+  left: -572px;
+}
+
+.vol-slider-3 {
+  position: relative;
+  left: -572px;
+}
+
+.rateplsmove {
+  position: relative;
+  left: -571px;
+}
+
+.side-slider #track-range {
   width: 140px;
   appearance: none;
   background: rgb(249, 222, 187);
@@ -277,7 +337,7 @@ header {
   border-radius: 10px;
 }
 
-.audio-track-a .side-slider #track-range::-webkit-slider-thumb {
+.side-slider #track-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 15px;
@@ -288,11 +348,11 @@ header {
   cursor: pointer;
 }
 
-.audio-track-a input[id=track-range] {
+input[id=track-range] {
   transform: rotate(270deg);
 }
 
-.audio-track-a .side-slider #track-speed {
+.side-slider #track-speed {
   width: 140px;
   appearance: none;
   background: rgb(249, 222, 187);
@@ -303,7 +363,7 @@ header {
   left: -125px;
 }
 
-.audio-track-a .side-slider #track-speed::-webkit-slider-thumb {
+.side-slider #track-speed::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 15px;
@@ -314,86 +374,174 @@ header {
   cursor: pointer;
 }
 
-.audio-track-a input[id=track-speed] {
+input[id=track-speed] {
   transform: rotate(270deg);
 }
 
-.audio-track-a .side-slider .fa-solid {
-  position: relative;
-  left: -50px;
-}
-
-.audio-track-a .audio-buttons {
+.audio-buttons {
   display: inline-block;
   position: relative;
-  top: 3px;
-  left: 30px;
+  top: -5px;
+  left: 20px;
   cursor: pointer;
 }
 
-.audio-track-a .audio-buttons .play-button .fa-circle-pause {
+.audio-buttons .play-button-0 .fa-circle-pause {
   display: none;
 }
 
-.audio-track-a .audio-buttons .play-button.playing .fa-circle-pause {
+.audio-buttons .play-button-1 .fa-circle-pause {
+  display: none;
+}
+
+.audio-buttons .play-button-2 .fa-circle-pause {
+  display: none;
+}
+
+.audio-buttons .play-button-3 .fa-circle-pause {
+  display: none;
+}
+
+.audio-buttons .play-button-0.playing .fa-circle-pause {
   display: inline-block;
   color: rgb(151, 210, 235);
 }
 
-.audio-track-a .audio-buttons .play-button.playing .fa-circle-play {
+.audio-buttons .play-button-1.playing .fa-circle-pause {
+  display: inline-block;
+  color: rgb(151, 210, 235);
+}
+
+.audio-buttons .play-button-2.playing .fa-circle-pause {
+  display: inline-block;
+  color: rgb(151, 210, 235);
+}
+
+.audio-buttons .play-button-3.playing .fa-circle-pause {
+  display: inline-block;
+  color: rgb(151, 210, 235);
+}
+
+.audio-buttons .play-button-0.playing .fa-circle-play {
   display: none;
 }
 
-.audio-track-a .fa-regular {
+.audio-buttons .play-button-1.playing .fa-circle-play {
+  display: none;
+}
+
+.audio-buttons .play-button-2.playing .fa-circle-play {
+  display: none;
+}
+
+.audio-buttons .play-button-3.playing .fa-circle-play {
+  display: none;
+}
+
+.fa-regular {
   color: rgb(249, 222, 187);
 }
 
-.audio-track-a .hot-cues {
+.hot-cues {
   display: inline-block;
   position: relative;
-  left: 67px;
+  left: 35px;
   top: -16px;
   cursor: pointer;
 }
 
-.audio-track-a .hot-cues .hot-cue-2 {
+.hot-cues .hot-cue-2-0 {
   position: relative;
-  left: 10px;
+  left: 9px;
 }
 
-.audio-track-a .hot-cues .hot-cue-1.clicked .fa-solid {
+.hot-cues .hot-cue-2-1 {
+  position: relative;
+  left: 9px;
+}
+
+.hot-cues .hot-cue-2-2 {
+  position: relative;
+  left: 9px;
+}
+
+.hot-cues .hot-cue-2-3 {
+  position: relative;
+  left: 9px;
+}
+
+.hot-cues .hot-cue-1-0.clicked .fa-solid {
   color: rgb(151, 210, 235);
 }
 
-.audio-track-a .hot-cues .hot-cue-2.clicked .fa-solid {
+.hot-cues .hot-cue-1-1.clicked .fa-solid {
   color: rgb(151, 210, 235);
 }
 
-.audio-track-a .fa-solid {
+.hot-cues .hot-cue-1-2.clicked .fa-solid {
+  color: rgb(151, 210, 235);
+}
+
+.hot-cues .hot-cue-1-3.clicked .fa-solid {
+  color: rgb(151, 210, 235);
+}
+
+.hot-cues .hot-cue-2-0.clicked .fa-solid {
+  color: rgb(151, 210, 235);
+}
+
+.hot-cues .hot-cue-2-1.clicked .fa-solid {
+  color: rgb(151, 210, 235);
+}
+
+.hot-cues .hot-cue-2-2.clicked .fa-solid {
+  color: rgb(151, 210, 235);
+}
+
+.hot-cues .hot-cue-2-3.clicked .fa-solid {
+  color: rgb(151, 210, 235);
+}
+
+.fa-solid {
   color: rgb(249, 222, 187);
 }
 
-.audio-track-a .reset-cues {
+.reset-cues {
   display: inline-block;
   position: relative;
   left: -41px;
   top: 22px;
 }
 
-.audio-track-a .reset-cues .reset-cue-2 {
+.reset-cues .reset-cue-2-0 {
   position: relative;
-  left: 12.5px;
+  left: 11.5px;
 }
 
-.audio-track-a :hover.fa-regular {
+.reset-cues .reset-cue-2-1 {
+  position: relative;
+  left: 11.5px;
+}
+
+.reset-cues .reset-cue-2-2 {
+  position: relative;
+  left: 11.5px;
+}
+
+.reset-cues .reset-cue-2-3 {
+  position: relative;
+  left: 11.5px;
+}
+
+:hover.fa-regular {
   color: rgb(255, 202, 175);
 }
 
-.audio-track-a :hover.fa-solid {
+:hover.fa-solid {
   color: rgb(255, 202, 175);
 }
 
-.audio-track-a button {
+button {
   border-radius: 5px;
   color: rgb(249, 222, 187);
   font-family: monospace;
@@ -405,106 +553,328 @@ header {
   border: none;
 }
 
-.audio-track-a .looper {
+.looper {
   display: inline-block;
   position: relative;
   padding: 0;
   border: none;
-  top: -41px;
-  left: -124px;
+  top: -48px;
+  left: -129px;
 }
 
-.audio-track-a .loop-in {
+.loop-in-0 {
   position: relative;
   left: -20px;
 }
 
-.audio-track-a .loop-out {
+.loop-out-0 {
   position: relative;
-  left: -5px;
+  left: -7px;
 }
 
-.audio-track-a :hover.loop-in {
+:hover.loop-in-0 {
   color: rgb(255, 202, 175);
 }
 
-.audio-track-a :hover.loop-out {
+:hover.loop-out-0 {
   color: rgb(255, 202, 175);
 }
 
-.audio-track-a .clear-loop {
+.clear-loop-0 {
   position: relative;
   left: 7px;
 }
 
-.audio-track-a :hover.clear-loop {
+:hover.clear-loop-0 {
   color: rgb(255, 202, 175);
 }
 
-.audio-track-a .toggle {
+.loop-in-1 {
+  position: relative;
+  left: -20px;
+}
+
+.loop-out-1 {
+  position: relative;
+  left: -7px;
+}
+
+:hover.loop-in-1 {
+  color: rgb(255, 202, 175);
+}
+
+:hover.loop-out-1 {
+  color: rgb(255, 202, 175);
+}
+
+.clear-loop-1 {
+  position: relative;
+  left: 7px;
+}
+
+:hover.clear-loop-1 {
+  color: rgb(255, 202, 175);
+}
+
+.loop-in-2 {
+  position: relative;
+  left: -20px;
+}
+
+.loop-out-2 {
+  position: relative;
+  left: -7px;
+}
+
+:hover.loop-in-2 {
+  color: rgb(255, 202, 175);
+}
+
+:hover.loop-out-2 {
+  color: rgb(255, 202, 175);
+}
+
+.clear-loop-2 {
+  position: relative;
+  left: 7px;
+}
+
+:hover.clear-loop-2 {
+  color: rgb(255, 202, 175);
+}
+
+.loop-in-3 {
+  position: relative;
+  left: -20px;
+}
+
+.loop-out-3 {
+  position: relative;
+  left: -7px;
+}
+
+:hover.loop-in-3 {
+  color: rgb(255, 202, 175);
+}
+
+:hover.loop-out-3 {
+  color: rgb(255, 202, 175);
+}
+
+.clear-loop-3 {
+  position: relative;
+  left: 7px;
+}
+
+:hover.clear-loop-3 {
+  color: rgb(255, 202, 175);
+}
+
+.toggle-0 {
   color: rgb(254, 240, 225);
   position: relative;
-  top: 5px;
-  left: -5px;
+  top: 3px;
+  left: 2px;
 }
 
-.audio-track-a :hover.toggle {
+:hover.toggle-0 {
   color: rgb(255, 202, 175);
 }
 
-.audio-track-a .loop-in.clicked {
+.toggle-1 {
+  color: rgb(254, 240, 225);
+  position: relative;
+  top: 3px;
+  left: 2px;
+}
+
+:hover.toggle-1 {
+  color: rgb(255, 202, 175);
+}
+
+.toggle-2 {
+  color: rgb(254, 240, 225);
+  position: relative;
+  top: 3px;
+  left: 2px;
+}
+
+:hover.toggle-2 {
+  color: rgb(255, 202, 175);
+}
+
+.toggle-3 {
+  color: rgb(254, 240, 225);
+  position: relative;
+  top: 3px;
+  left: 2px;
+}
+
+:hover.toggle-3 {
+  color: rgb(255, 202, 175);
+}
+
+.loop-in-0.clicked {
   color: rgb(151, 210, 235);
 }
 
-.audio-track-a .loop-out.clicked {
+.loop-out-0.clicked {
   color: rgb(151, 210, 235);
 }
 
-.audio-track-a .empty-space {
-  background-color: black;
+.loop-in-1.clicked {
+  color: rgb(151, 210, 235);
+}
+
+.loop-out-1.clicked {
+  color: rgb(151, 210, 235);
+}
+
+.loop-in-2.clicked {
+  color: rgb(151, 210, 235);
+}
+
+.loop-out-2.clicked {
+  color: rgb(151, 210, 235);
+}
+
+.loop-in-3.clicked {
+  color: rgb(151, 210, 235);
+}
+
+.loop-out-3.clicked {
+  color: rgb(151, 210, 235);
+}
+
+.empty-space {
   display: inline-block;
   position: relative;
 }
 
-.audio-track-a .bpm-container {
+.bpm-container {
   z-index: 8;
   display: flex;
   justify-content: center;
   top: -35px;
 }
 
-.audio-track-a .playheads {
-  margin-top: 10px;
-  width: 35%;
-  height: 5px;
-  padding: 5px 25px;
-  margin-right: 3px;
-  border-radius: 25px;
-  margin-left: 7.5px;
+.parent-playhead-0 {
+  z-index: 1;
+  width: 90%;
+  height: 2px;
+  margin-right: 1%;
+  margin-left: 1%;
   display: flex;
   justify-content: center;
-  position: relative;
+  align-items: center;
 }
 
-.audio-track-a .playheads.clicked {
+.parent-playhead-1 {
+  z-index: 1;
+  width: 90%;
+  height: 2px;
+  margin-right: 1%;
+  margin-left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-playhead-2 {
+  z-index: 1;
+  width: 90%;
+  height: 2px;
+  margin-right: 1%;
+  margin-left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-playhead-3 {
+  z-index: 1;
+  width: 90%;
+  height: 2px;
+  margin-right: 1%;
+  margin-left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playheads-0.clicked {
   display: none;
 }
 
-.audio-track-a .fa-solid.fa-sort-down {
+.playheads-1.clicked {
+  display: none;
+}
+
+.playheads-2.clicked {
+  display: none;
+}
+
+.playheads-3.clicked {
+  display: none;
+}
+
+.playheads-0 .fa-solid.fa-sort-down {
   z-index: 5;
   color: rgb(151, 210, 235);
   position: fixed;
-  top: 120px;
+  top: 169px;
 }
 
-.audio-track-a .fa-solid.fa-sort-up {
+.playheads-0 .fa-solid.fa-sort-up {
   z-index: 5;
   color: rgb(151, 210, 235);
   position: fixed;
-  top: 224px;
+  top: 277px;
 }
 
-.audio-track-a .vol {
+.playheads-1 .fa-solid.fa-sort-down {
+  z-index: 5;
+  color: rgb(151, 210, 235);
+  position: fixed;
+  top: 169px;
+}
+
+.playheads-1 .fa-solid.fa-sort-up {
+  z-index: 5;
+  color: rgb(151, 210, 235);
+  position: fixed;
+  top: 277px;
+}
+
+.playheads-2 .fa-solid.fa-sort-down {
+  z-index: 5;
+  color: rgb(151, 210, 235);
+  position: fixed;
+  top: 453px;
+}
+
+.playheads-2 .fa-solid.fa-sort-up {
+  z-index: 5;
+  color: rgb(151, 210, 235);
+  position: fixed;
+  top: 561px;
+}
+
+.playheads-3 .fa-solid.fa-sort-down {
+  z-index: 5;
+  color: rgb(151, 210, 235);
+  position: fixed;
+  top: 453px;
+}
+
+.playheads-3 .fa-solid.fa-sort-up {
+  z-index: 5;
+  color: rgb(151, 210, 235);
+  position: fixed;
+  top: 561px;
+}
+
+.vol-0 {
   display: inline-block;
   position: relative;
   left: -301px;
@@ -512,19 +882,79 @@ header {
   cursor: pointer;
 }
 
-.audio-track-a .mute.clicked {
+.vol-1 {
+  display: inline-block;
+  position: relative;
+  left: -872px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.vol-2 {
+  display: inline-block;
+  position: relative;
+  left: -301px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.vol-3 {
+  display: inline-block;
+  position: relative;
+  left: -872px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.mute-0.clicked {
   display: none;
 }
 
-.audio-track-a .muted {
+.muted-0 {
   display: none;
 }
 
-.audio-track-a .muted.clicked {
+.muted-0.clicked {
   display: inline-block;
 }
 
-.audio-track-a .speed-button {
+.mute-1.clicked {
+  display: none;
+}
+
+.muted-1 {
+  display: none;
+}
+
+.muted-1.clicked {
+  display: inline-block;
+}
+
+.mute-2.clicked {
+  display: none;
+}
+
+.muted-2 {
+  display: none;
+}
+
+.muted-2.clicked {
+  display: inline-block;
+}
+
+.mute-3.clicked {
+  display: none;
+}
+
+.muted-3 {
+  display: none;
+}
+
+.muted-3.clicked {
+  display: inline-block;
+}
+
+.speed-button-0 {
   display: inline-block;
   position: relative;
   left: -296px;
@@ -532,18 +962,42 @@ header {
   cursor: pointer;
 }
 
-.audio-track-a .track-a-id {
+.speed-button-1 {
+  display: inline-block;
+  position: relative;
+  left: -867px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.speed-button-2 {
+  display: inline-block;
+  position: relative;
+  left: -296px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.speed-button-3 {
+  display: inline-block;
+  position: relative;
+  left: -867px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.track-a-id {
   display: inline-block;
   position: relative;
   color: aliceblue;
   width: 65px;
   height: 30px;
   border-radius: 30px;
-  left: -405.5px;
+  left: -414.5px;
   top: 12px;
 }
 
-.audio-track-a .track-a-id h4 {
+.track-a-id h4 {
   position: relative;
   display: flex;
   justify-content: center;

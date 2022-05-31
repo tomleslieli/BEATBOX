@@ -15,8 +15,13 @@ body {
   background-color: rgb(255, 244, 226);
 }
 
+body.clicked {
+  background-color: rgb(40, 80, 97);
+}
+
 header {
   display: inline-block;
+  white-space: nowrap;
   padding: 10px;
   margin: 10px;
   min-width: 700px;
@@ -91,15 +96,32 @@ header {
   color: rgb(255, 202, 175);
 }
 
-.logo img {
+.logo .regular img {
   width: 25%;
+}
+
+.logo .dark img {
+  display: none;
+}
+
+.regular.clicked img {
+  display: none;
+}
+
+.dark.clicked img {
+  width: 25%;
+  display: inline-block;
+}
+
+.night-mode {
+  display: inline-block;
 }
 
 .info-and-tag {
   white-space: nowrap;
 }
 
-.track-info {
+.track-info-0 {
   display: inline-block;
   font-family: sans-serif;
   color: aliceblue;
@@ -118,6 +140,79 @@ header {
   cursor: default;
 }
 
+.track-info-1 {
+  display: inline-block;
+  font-family: sans-serif;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 10px;
+  width: 19%;
+  height: 24px;
+  max-height: 40px;
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  background-color: rgb(151, 210, 235);
+  padding: 5px 25px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  left: 3px;
+  cursor: default;
+}
+
+.track-info-2 {
+  display: inline-block;
+  font-family: sans-serif;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 10px;
+  width: 19%;
+  height: 24px;
+  max-height: 40px;
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  background-color: rgb(151, 210, 235);
+  padding: 5px 25px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  left: 3px;
+  cursor: default;
+}
+
+.track-info-3 {
+  display: inline-block;
+  font-family: sans-serif;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 10px;
+  width: 19%;
+  height: 24px;
+  max-height: 40px;
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  background-color: rgb(151, 210, 235);
+  padding: 5px 25px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  left: 3px;
+  cursor: default;
+}
+
+.track-info-0.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.track-info-1.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.track-info-2.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.track-info-3.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
 .a-b {
   display: flex;
   justify-content: space-around;
@@ -132,7 +227,7 @@ header {
   width: -1px;
 }
 
-.waveform {
+.waveform-0 {
   margin-top: 10px;
   z-index: 1;
   background: rgb(249, 222, 187);
@@ -147,7 +242,68 @@ header {
   justify-content: center;
 }
 
-.bpm-container {
+.waveform-1 {
+  margin-top: 10px;
+  z-index: 1;
+  background: rgb(249, 222, 187);
+  width: 90%;
+  height: 130px;
+  box-shadow: 0 5px 5px -4px rgba(12, 248, 252, 0.3);
+  padding: 5px 3%;
+  margin-right: 2.8%;
+  border-radius: 25px;
+  margin-left: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.waveform-2 {
+  margin-top: 10px;
+  z-index: 1;
+  background: rgb(249, 222, 187);
+  width: 90%;
+  height: 130px;
+  box-shadow: 0 5px 5px -4px rgba(12, 248, 252, 0.3);
+  padding: 5px 3%;
+  margin-right: 2.8%;
+  border-radius: 25px;
+  margin-left: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.waveform-3 {
+  margin-top: 10px;
+  z-index: 1;
+  background: rgb(249, 222, 187);
+  width: 90%;
+  height: 130px;
+  box-shadow: 0 5px 5px -4px rgba(12, 248, 252, 0.3);
+  padding: 5px 3%;
+  margin-right: 2.8%;
+  border-radius: 25px;
+  margin-left: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.waveform-0.clicked {
+  background-color: rgb(57, 118, 123);
+}
+
+.waveform-1.clicked {
+  background-color: rgb(57, 118, 123);
+}
+
+.waveform-2.clicked {
+  background-color: rgb(57, 118, 123);
+}
+
+.waveform-3.clicked {
+  background-color: rgb(57, 118, 123);
+}
+
+.bpm-container-0 {
   position: relative;
   left: 120px;
   top: -47px;
@@ -157,6 +313,58 @@ header {
   background-color: rgb(151, 210, 235);
   border-radius: 10px;
   margin-right: 90%;
+}
+
+.bpm-container-1 {
+  position: relative;
+  left: 120px;
+  top: -47px;
+  padding-left: 10px;
+  height: 22px;
+  width: 40%;
+  background-color: rgb(151, 210, 235);
+  border-radius: 10px;
+  margin-right: 90%;
+}
+
+.bpm-container-2 {
+  position: relative;
+  left: 120px;
+  top: -47px;
+  padding-left: 10px;
+  height: 22px;
+  width: 40%;
+  background-color: rgb(151, 210, 235);
+  border-radius: 10px;
+  margin-right: 90%;
+}
+
+.bpm-container-3 {
+  position: relative;
+  left: 120px;
+  top: -47px;
+  padding-left: 10px;
+  height: 22px;
+  width: 40%;
+  background-color: rgb(151, 210, 235);
+  border-radius: 10px;
+  margin-right: 90%;
+}
+
+.bpm-container-0.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.bpm-container-1.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.bpm-container-2.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.bpm-container-3.clicked {
+  background-color: rgb(146, 87, 109);
 }
 
 .bpm {
@@ -184,7 +392,7 @@ header {
   cursor: default;
 }
 
-.upload {
+.upload-0 {
   position: relative;
   display: inline-block;
   top: -20px;
@@ -203,26 +411,172 @@ header {
   cursor: pointer;
 }
 
-.upload label {
+.upload-1 {
+  position: relative;
+  display: inline-block;
+  top: -20px;
+  left: 9px;
+  border: 0px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 10px;
+  min-width: 55px;
+  max-width: 50px;
+  min-height: 34px;
+  border-radius: 35px;
+  background-color: rgb(151, 210, 235);
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  cursor: pointer;
+}
+
+.upload-2 {
+  position: relative;
+  display: inline-block;
+  top: -20px;
+  left: 9px;
+  border: 0px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 10px;
+  min-width: 55px;
+  max-width: 50px;
+  min-height: 34px;
+  border-radius: 35px;
+  background-color: rgb(151, 210, 235);
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  cursor: pointer;
+}
+
+.upload-3 {
+  position: relative;
+  display: inline-block;
+  top: -20px;
+  left: 9px;
+  border: 0px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 10px;
+  min-width: 55px;
+  max-width: 50px;
+  min-height: 34px;
+  border-radius: 35px;
+  background-color: rgb(151, 210, 235);
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  cursor: pointer;
+}
+
+.upload-0.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.upload-1.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.upload-2.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.upload-3.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.upload-0 label {
   position: relative;
   left: 15px;
   top: 6px;
   cursor: pointer;
 }
 
-.clear-track {
+.upload-1 label {
+  position: relative;
+  left: 15px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.upload-2 label {
+  position: relative;
+  left: 15px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.upload-3 label {
+  position: relative;
+  left: 15px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.clear-track-0 {
   display: inline-block;
   position: relative;
   left: 10px;
   top: -22px;
   width: 55px;
-  height: 35px;
+  height: 34px;
   background-color: rgb(151, 210, 235);
   box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
   border-radius: 30px;
 }
 
-.clear-track .clear-0 {
+.clear-track-1 {
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  top: -22px;
+  width: 55px;
+  height: 34px;
+  background-color: rgb(151, 210, 235);
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  border-radius: 30px;
+}
+
+.clear-track-2 {
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  top: -22px;
+  width: 55px;
+  height: 34px;
+  background-color: rgb(151, 210, 235);
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  border-radius: 30px;
+}
+
+.clear-track-3 {
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  top: -22px;
+  width: 55px;
+  height: 34px;
+  background-color: rgb(151, 210, 235);
+  box-shadow: 0 7px 5px -4px rgba(12, 248, 252, 0.3);
+  border-radius: 30px;
+}
+
+.clear-track-0.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.clear-track-1.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.clear-track-2.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.clear-track-3.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.clear-track-0 .clear-0 {
   position: relative;
   font-family: sans-serif;
   color: aliceblue;
@@ -232,7 +586,7 @@ header {
   top: 8px;
 }
 
-.clear-track .clear-1 {
+.clear-track-1 .clear-1 {
   position: relative;
   font-family: sans-serif;
   color: aliceblue;
@@ -242,7 +596,7 @@ header {
   top: 8px;
 }
 
-.clear-track .clear-2 {
+.clear-track-2 .clear-2 {
   position: relative;
   font-family: sans-serif;
   color: aliceblue;
@@ -252,7 +606,7 @@ header {
   top: 8px;
 }
 
-.clear-track .clear-3 {
+.clear-track-3 .clear-3 {
   position: relative;
   font-family: sans-serif;
   color: aliceblue;
@@ -262,19 +616,55 @@ header {
   top: 8px;
 }
 
-.track-info {
+.track-info-0 {
   position: relative;
   left: 8px;
   min-width: 35%;
 }
 
-.track-info .track-name {
+.track-info-1 {
+  position: relative;
+  left: 8px;
+  min-width: 35%;
+}
+
+.track-info-2 {
+  position: relative;
+  left: 8px;
+  min-width: 35%;
+}
+
+.track-info-3 {
+  position: relative;
+  left: 8px;
+  min-width: 35%;
+}
+
+.track-info-0 .track-name {
   position: relative;
   top: -3.5px;
   left: -7px;
 }
 
-.wave-text-background {
+.track-info-1 .track-name {
+  position: relative;
+  top: -3.5px;
+  left: -7px;
+}
+
+.track-info-2 .track-name {
+  position: relative;
+  top: -3.5px;
+  left: -7px;
+}
+
+.track-info-3 .track-name {
+  position: relative;
+  top: -3.5px;
+  left: -7px;
+}
+
+.wave-text-background-0 {
   background-color: rgb(151, 210, 235);
   border-radius: 10px;
   max-height: 22px;
@@ -284,13 +674,71 @@ header {
   margin-right: -9px;
 }
 
+.wave-text-background-1 {
+  background-color: rgb(151, 210, 235);
+  border-radius: 10px;
+  max-height: 22px;
+  max-width: 110px;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: -9px;
+}
+
+.wave-text-background-2 {
+  background-color: rgb(151, 210, 235);
+  border-radius: 10px;
+  max-height: 22px;
+  max-width: 110px;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: -9px;
+}
+
+.wave-text-background-3 {
+  background-color: rgb(151, 210, 235);
+  border-radius: 10px;
+  max-height: 22px;
+  max-width: 110px;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: -9px;
+}
+
+.wave-text-background-0.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.wave-text-background-1.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.wave-text-background-2.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.wave-text-background-3.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
 .waveform-slider {
   white-space: nowrap;
   position: relative;
   top: -25px;
 }
 
-.waveform-slider .waveform {
+.waveform-slider .waveform-0 {
+  display: inline-block;
+}
+
+.waveform-slider .waveform-1 {
+  display: inline-block;
+}
+
+.waveform-slider .waveform-2 {
+  display: inline-block;
+}
+
+.waveform-slider .waveform-3 {
   display: inline-block;
 }
 
@@ -378,12 +826,42 @@ input[id=track-speed] {
   transform: rotate(270deg);
 }
 
+.separator-1 {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.separator-2 {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
 .audio-buttons {
   display: inline-block;
   position: relative;
   top: -5px;
   left: 20px;
   cursor: pointer;
+}
+
+.audio-buttons .play-button-0 {
+  position: relative;
+  left: 381px;
+}
+
+.audio-buttons .play-button-2 {
+  position: relative;
+  left: 381px;
+}
+
+.audio-buttons .stop-button-0 {
+  position: relative;
+  left: 381px;
+}
+
+.audio-buttons .stop-button-2 {
+  position: relative;
+  left: 381px;
 }
 
 .audio-buttons .play-button-0 .fa-circle-pause {
@@ -450,9 +928,19 @@ input[id=track-speed] {
   cursor: pointer;
 }
 
+.hot-cues .hot-cue-1-0 {
+  position: relative;
+  left: 206px;
+}
+
+.hot-cues .hot-cue-1-2 {
+  position: relative;
+  left: 206px;
+}
+
 .hot-cues .hot-cue-2-0 {
   position: relative;
-  left: 9px;
+  left: 217px;
 }
 
 .hot-cues .hot-cue-2-1 {
@@ -462,12 +950,32 @@ input[id=track-speed] {
 
 .hot-cues .hot-cue-2-2 {
   position: relative;
-  left: 9px;
+  left: 216px;
 }
 
 .hot-cues .hot-cue-2-3 {
   position: relative;
   left: 9px;
+}
+
+.reset-cue-1-0 {
+  position: relative;
+  left: 207px;
+}
+
+.reset-cue-1-2 {
+  position: relative;
+  left: 207px;
+}
+
+.reset20 {
+  position: relative;
+  left: 208px;
+}
+
+.reset22 {
+  position: relative;
+  left: 208px;
 }
 
 .hot-cues .hot-cue-1-0.clicked .fa-solid {
@@ -504,6 +1012,10 @@ input[id=track-speed] {
 
 .fa-solid {
   color: rgb(249, 222, 187);
+}
+
+.fa-solid.clicked {
+  color: rgb(146, 87, 109);
 }
 
 .reset-cues {
@@ -560,6 +1072,24 @@ button {
   border: none;
   top: -48px;
   left: -129px;
+}
+
+.looper-0 {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  border: none;
+  top: -48px;
+  left: 230px;
+}
+
+.looper-2 {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  border: none;
+  top: -48px;
+  left: 230px;
 }
 
 .loop-in-0 {
@@ -751,7 +1281,28 @@ button {
   position: relative;
 }
 
-.bpm-container {
+.bpm-container-0 {
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  top: -35px;
+}
+
+.bpm-container-1 {
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  top: -35px;
+}
+
+.bpm-container-2 {
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  top: -35px;
+}
+
+.bpm-container-3 {
   z-index: 8;
   display: flex;
   justify-content: center;
@@ -822,7 +1373,7 @@ button {
   z-index: 5;
   color: rgb(151, 210, 235);
   position: fixed;
-  top: 169px;
+  top: 166px;
   margin-left: 12px;
 }
 
@@ -838,7 +1389,7 @@ button {
   z-index: 5;
   color: rgb(151, 210, 235);
   position: fixed;
-  top: 169px;
+  top: 166px;
   margin-left: 12px;
 }
 
@@ -854,7 +1405,7 @@ button {
   z-index: 5;
   color: rgb(151, 210, 235);
   position: fixed;
-  top: 453px;
+  top: 450px;
   margin-left: 12px;
 }
 
@@ -870,7 +1421,7 @@ button {
   z-index: 5;
   color: rgb(151, 210, 235);
   position: fixed;
-  top: 453px;
+  top: 450px;
   margin-left: 12px;
 }
 
@@ -880,6 +1431,38 @@ button {
   position: fixed;
   top: 561px;
   margin-left: 12px;
+}
+
+.playheads-0 .fa-solid.fa-sort-up.night {
+  color: rgb(146, 87, 109);
+}
+
+.playheads-0 .fa-solid.fa-sort-down.night {
+  color: rgb(146, 87, 109);
+}
+
+.playheads-1 .fa-solid.fa-sort-up.night {
+  color: rgb(146, 87, 109);
+}
+
+.playheads-1 .fa-solid.fa-sort-down.night {
+  color: rgb(146, 87, 109);
+}
+
+.playheads-2 .fa-solid.fa-sort-up.night {
+  color: rgb(146, 87, 109);
+}
+
+.playheads-2 .fa-solid.fa-sort-down.night {
+  color: rgb(146, 87, 109);
+}
+
+.playheads-3 .fa-solid.fa-sort-up.night {
+  color: rgb(146, 87, 109);
+}
+
+.playheads-3 .fa-solid.fa-sort-down.night {
+  color: rgb(146, 87, 109);
 }
 
 .vol-0 {
@@ -1015,4 +1598,110 @@ button {
   font-size: 17px;
   font-weight: bold;
   cursor: default;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 250px;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(151, 210, 235);
+  width: 40%;
+  height: 12.5%;
+  border-radius: 30px;
+  color: aliceblue;
+  font-weight: bold;
+  font-family: monospace;
+  margin-bottom: 1%;
+}
+
+.bar.clicked {
+  background-color: rgb(146, 87, 109);
+}
+
+.controls {
+  color: aliceblue;
+}
+
+.night-mode {
+  color: aliceblue;
+}
+
+.about {
+  color: aliceblue;
+}
+
+.github {
+  color: aliceblue;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.info-boxes {
+  display: flex;
+  visibility: hidden;
+  opacity: 0%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -16.5px;
+}
+
+.about-text {
+  position: absolute;
+  margin-top: 250px;
+  background-color: rgb(151, 210, 235);
+  width: 700px;
+  height: 220px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: aliceblue;
+  list-style: none;
+  font-family: monospace;
+}
+
+.about-text > p {
+  display: relative;
+  flex-wrap: wrap;
+  color: aliceblue;
+  opacity: 100%;
+  cursor: default;
+}
+
+.info-boxes.clicked {
+  visibility: visible;
+  opacity: 70%;
+  transition: visbility 0s 0.25s, opacity 0.25s linear;
+}
+
+.about-text.night {
+  background-color: rgb(146, 87, 109);
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: -20px;
+  cursor: default;
+}
+
+li {
+  display: block;
+  margin-top: -0.5px;
+  cursor: default;
+}
+
+.about-text > p {
+  margin-bottom: -30px;
 }

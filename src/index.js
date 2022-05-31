@@ -320,4 +320,163 @@ createTrack(0);
 createTrack(1);
 createTrack(2);
 createTrack(3);
-// CROSSFADERS ///////////////////////////////////////////////////////////
+// NAVBAR ///////////////////////////////////////////////////////////
+const aboutsection = document.querySelector(".about");
+const infoboxes = document.querySelector(".info-boxes")
+let aboutclicked = false;
+aboutsection.addEventListener("click", () => {
+    if (!aboutclicked){
+        infoboxes.classList.add("clicked");
+        aboutclicked = true;
+    } else {
+        infoboxes.classList.remove("clicked");
+        aboutclicked = false;
+    }
+})
+
+let nightModeOn = false;
+const waveform0 = document.querySelector(".waveform-0");
+const waveform1 = document.querySelector(".waveform-1");
+const waveform2 = document.querySelector(".waveform-2");
+const waveform3 = document.querySelector(".waveform-3");
+const body= document.querySelector("body");
+
+const trackinfo0 = document.querySelector(".track-info-0");
+const trackinfo1 = document.querySelector(".track-info-1");
+const trackinfo2 = document.querySelector(".track-info-2");
+const trackinfo3 = document.querySelector(".track-info-3");
+
+const upload0 = document.querySelector(".upload-0")
+const upload1 = document.querySelector(".upload-1")
+const upload2 = document.querySelector(".upload-2")
+const upload3 = document.querySelector(".upload-3")
+
+const clear0 = document.querySelector(".clear-track-0")
+const clear1 = document.querySelector(".clear-track-1")
+const clear2 = document.querySelector(".clear-track-2")
+const clear3 = document.querySelector(".clear-track-3")
+
+const regular = document.querySelector(".regular")
+const dark = document.querySelector(".dark")
+
+const bpm0 = document.querySelector(".bpm-container-0")
+const bpm1 = document.querySelector(".bpm-container-1")
+const bpm2 = document.querySelector(".bpm-container-2")
+const bpm3 = document.querySelector(".bpm-container-3")
+
+const wavetext0 = document.querySelector(".wave-text-background-0");
+const wavetext1 = document.querySelector(".wave-text-background-1");
+const wavetext2 = document.querySelector(".wave-text-background-2");
+const wavetext3 = document.querySelector(".wave-text-background-3");
+
+const playheads0 = document.querySelector("playheads-0.fa-solid.fa-sort-up");
+const playheads1 = document.querySelector("playheads-0.fa-solid.fa-sort-down");
+
+const abouttext = document.querySelector(".about-text")
+
+const navbar = document.querySelector(".bar")
+
+const nightMode = document.querySelector(".night-mode");
+nightMode.addEventListener("click", () => {
+    if (!nightModeOn) {
+        body.classList.add("clicked");
+
+        waveform0.classList.add("clicked");
+        waveform1.classList.add("clicked");
+        waveform2.classList.add("clicked");
+        waveform3.classList.add("clicked");
+
+        trackinfo0.classList.add("clicked");
+        trackinfo1.classList.add("clicked");
+        trackinfo2.classList.add("clicked");
+        trackinfo3.classList.add("clicked");
+
+        upload0.classList.add("clicked");
+        upload1.classList.add("clicked");
+        upload2.classList.add("clicked");
+        upload3.classList.add("clicked");
+
+        clear0.classList.add("clicked");
+        clear1.classList.add("clicked");
+        clear2.classList.add("clicked");
+        clear3.classList.add("clicked");
+
+        regular.classList.add("clicked");
+        dark.classList.add("clicked"); 
+
+        bpm0.classList.add("clicked");
+        bpm1.classList.add("clicked");
+        bpm2.classList.add("clicked");
+        bpm3.classList.add("clicked");
+
+        wavetext0.classList.add("clicked");
+        wavetext1.classList.add("clicked");
+        wavetext2.classList.add("clicked");
+        wavetext3.classList.add("clicked");
+
+        abouttext.classList.add("night");
+
+        navbar.classList.add("clicked");
+
+        mixer[0].setWaveColor('rgb(108, 184, 159)');
+        mixer[0].setProgressColor('rgb(227, 158, 164)');
+        mixer[1].setWaveColor('rgb(108, 184, 159)');
+        mixer[1].setProgressColor('rgb(227, 158, 164)');
+        mixer[2].setWaveColor('rgb(108, 184, 159)');
+        mixer[2].setProgressColor('rgb(227, 158, 164)');
+        mixer[3].setWaveColor('rgb(108, 184, 159)');
+        mixer[3].setProgressColor('rgb(227, 158, 164)');
+
+        nightModeOn = true;
+    } else {
+        body.classList.remove("clicked");
+
+        trackinfo0.classList.remove("clicked");
+        trackinfo1.classList.remove("clicked");
+        trackinfo2.classList.remove("clicked");
+        trackinfo3.classList.remove("clicked");
+
+        waveform0.classList.remove("clicked");
+        waveform1.classList.remove("clicked");
+        waveform2.classList.remove("clicked");
+        waveform3.classList.remove("clicked");  
+        
+        upload0.classList.remove("clicked");
+        upload1.classList.remove("clicked");
+        upload2.classList.remove("clicked");
+        upload3.classList.remove("clicked");
+        
+        clear0.classList.remove("clicked");
+        clear1.classList.remove("clicked");
+        clear2.classList.remove("clicked");
+        clear3.classList.remove("clicked");
+        
+        bpm0.classList.remove("clicked");
+        bpm1.classList.remove("clicked");
+        bpm2.classList.remove("clicked");
+        bpm3.classList.remove("clicked");
+
+        wavetext0.classList.remove("clicked");
+        wavetext1.classList.remove("clicked");
+        wavetext2.classList.remove("clicked");
+        wavetext3.classList.remove("clicked");
+
+        mixer[0].setWaveColor('rgb(151, 210, 235)');
+        mixer[0].setProgressColor('rgb(300, 150, 90)');
+        mixer[1].setWaveColor('rgb(151, 210, 235)');
+        mixer[1].setProgressColor('rgb(300, 150, 90)');
+        mixer[2].setWaveColor('rgb(151, 210, 235)');
+        mixer[2].setProgressColor('rgb(300, 150, 90)');
+        mixer[3].setWaveColor('rgb(151, 210, 235)');
+        mixer[3].setProgressColor('rgb(300, 150, 90)');
+
+        regular.classList.remove("clicked");
+        dark.classList.remove("clicked");   
+        
+        abouttext.classList.remove("night");
+        
+        navbar.classList.remove("clicked");
+
+        nightModeOn = false;
+    }
+})

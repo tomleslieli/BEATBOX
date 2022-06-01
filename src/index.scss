@@ -1477,13 +1477,14 @@ li {
 .help > img {
     z-index: 10;
     position: absolute;
-    max-width: 100%;
-    min-width: 100%;
-    max-height: 98%;
+    max-height: 600px;
+    top: 80px;
 }
 .help.clicked {
-    display: block;
+    display: flex;
     opacity: 100%;
+    justify-content: center;
+    align-items: flex-start;
 }
 .plshelp {
     color: aliceblue;

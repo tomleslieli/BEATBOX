@@ -1608,7 +1608,7 @@ footer {
 }
 
 .bar {
-  z-index: 9;
+  z-index: 11;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1661,7 +1661,7 @@ a {
   margin-top: 250px;
   background-color: rgb(151, 210, 235);
   width: 700px;
-  height: 220px;
+  height: 200px;
   border-radius: 60px;
   display: flex;
   justify-content: center;
@@ -1717,6 +1717,7 @@ li {
   position: absolute;
   max-width: 100%;
   min-width: 100%;
+  max-height: 98%;
 }
 
 .help.clicked {

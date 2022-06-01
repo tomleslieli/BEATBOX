@@ -1393,6 +1393,9 @@ footer {
     font-family: monospace;
     margin-bottom: 1%;
     min-width: 400px;
+    position: absolute;
+    top: 685px;
+    max-height: 30px;
 }
 .bar.clicked{
     background-color:rgb(146, 87, 109);
@@ -1429,7 +1432,7 @@ a {
     width: 700px;
     height: 190px;
     border-radius: 60px;
-    top: 380px;
+    top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1447,7 +1450,7 @@ a {
 }
 .info-boxes.clicked {
     visibility: visible;
-    opacity: 70%;
+    opacity: 85%;
     transition: visbility 0s 0.25s, opacity 0.25s linear;
 }
 .about-text.night {

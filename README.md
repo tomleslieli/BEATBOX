@@ -22,9 +22,11 @@ He has 10+ years of piano experience & recreationally produces music on Ableton.
 Tom is currently enrolled in App Academy's March 2022 cohort.
 
 https://www.linkedin.com/in/tomleslieli/
+
 https://github.com/tomleslieli/
 
 https://www.instagram.com/tomleslieli/
+
 https://vimeo.com/tomleslieli/
 
 ##################################################

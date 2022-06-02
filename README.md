@@ -1,6 +1,8 @@
 ![Alt text](assets/images/USERGUIDE.png?raw=true "User Guide")
 
-BeatBox is a free, open source four-channel DJ application. Suited for both beginners as well as advanced DJs, 
+BeatBox is a free, open source four-channel DJ application. Suited for both beginners as well as advanced DJs.
+
+https://tomleslieli.github.io/BeatBox/
 
 BeatBox pairs an easy-to-use / minimalistic UI with industry-standard features such as:
 
@@ -15,6 +17,7 @@ BeatBox pairs an easy-to-use / minimalistic UI with industry-standard features s
 BeatBox utilizes third-party components such as Wavesurfer.js and Font-Awesome stylesheets. More information on these tools at the following links:
 
 https://wavesurfer-js.org/
+
 https://fontawesome.com/
 
 ########################################################################

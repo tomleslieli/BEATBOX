@@ -1,3 +1,5 @@
+![Alt text](assets/images/USERGUIDE.png?raw=true "User Guide")
+
 BeatBox is a free, open source four-channel DJ application. Suited for both beginners as well as advanced DJs, 
 
 BeatBox pairs an easy-to-use / minimalistic UI with industry-standard features such as:
@@ -7,6 +9,25 @@ BeatBox pairs an easy-to-use / minimalistic UI with industry-standard features s
     - Speed Controls
     - Hot Cues
     - Loops
+
+##################################################
+
+BeatBox utilizes third-party components such as Wavesurfer.js and Font-Awesome stylesheets. More information on these tools at the following links:
+
+https://wavesurfer-js.org/
+https://fontawesome.com/
+
+##################################################
+
+Upcoming updates / integrations:
+
+    - Spotify Playlist Integration
+    - BPM Detection
+    - Audio Sync
+    - Key Bindings
+    - Crossfaders
+    - Biquad Filters
+    - Sample Libraries
 
 ##################################################
 
@@ -31,31 +52,18 @@ https://vimeo.com/tomleslieli/
 
 ##################################################
 
-BeatBox utilizes third-party components such as Wavesurfer.js and Font-Awesome stylesheets. More information on these tools at the following links:
-
-https://wavesurfer-js.org/
-https://fontawesome.com/
-
-##################################################
-
-Upcoming updates / integrations:
-
-    - Spotify Playlist Integration
-    - BPM Detection
-    - Audio Sync
-    - Key Bindings
-    - Crossfaders
-    - Biquad Filters
-    - Sample Libraries
-
-##################################################
-
 Original Project Roadmap:
 
 Friday (05/27/2022) - Create Channel Equalizers, High Pass / Low Pass Filters on single instance of Audio Player. (Implemented all but audio filters)
+
 Saturday (05/28/2022) - Create Loops & Hot Cues on single instance of Audio Player. (Implemented loops & hot cues)
+
 Sunday (05/29/2022) - Implement four instances of Audio Players as well as Crossfader functionality. (Implemented four unique instances)
+
 Monday (05/30/2022) - Create Splash Screen & iron out any UI issues. (Implemented splash screen & ironed out issues with responsiveness)
+
 Tuesday (05/31/2022) - Connect to Spotify API & use BPM detection to implement Audio Sync functionality. (Did not implement Spotify API, added nav bar with user resources, as well as a Night Mode)
+
 Wednesday (06/01/2022) - Utilize Spotify API to allow loading of a users' personal playlists. (Performed housekeeping & ensured project is ready for GitHub push party)
+
 Thursday (06/02/2022) - Deploy Project on GitHub Pages / Heroku.

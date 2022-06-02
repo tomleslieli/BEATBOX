@@ -181,6 +181,8 @@ const createTrack = function (id) {
             tracks[id].totalDuration01 = mixer[id].getDuration();
             let currTimeOne = tracks[id].hotCue01 / tracks[id].totalDuration01
             mixer[id].seekTo(currTimeOne);
+            mixer[id].play();
+            playButton.classList.add("playing");
 
             tracks[id].looped = false;
             loopIn.classList.remove("clicked");
@@ -203,6 +205,8 @@ const createTrack = function (id) {
             totalDuration02 = mixer[id].getDuration();
             let currTimeTwo = tracks[id].hotCue02 / totalDuration02
             mixer[id].seekTo(currTimeTwo);
+            mixer[id].play();
+            playButton.classList.add("playing");
 
             tracks[id].looped = false;
             loopIn.classList.remove("clicked");
@@ -258,8 +262,10 @@ const createTrack = function (id) {
     function startPlayback(){
         mixer[id].playPause();
         if (mixer[id].isPlaying()){
+            mixer[id].play();
             playButton.classList.add("playing")
         } else {
+            mixer[id].pause();
             playButton.classList.remove("playing")
         }
     }

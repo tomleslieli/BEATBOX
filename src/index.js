@@ -148,7 +148,7 @@ const createTrack = function (id) {
             muteVol.classList.add("clicked");
             muted.classList.add("clicked");
             volSlider.value = 0;
-        } 
+        }
     });
     muted.addEventListener("click", () => {
         if (mixer[id].getMute()){
@@ -156,6 +156,15 @@ const createTrack = function (id) {
         muteVol.classList.remove("clicked");
         muted.classList.remove("clicked");
         volSlider.value = tracks[id].originalVolume;
+        }
+    })
+
+    mixer[id].on('audioprocess', function() {
+        if (mixer[id].getMute() && mixer[id].getVolume() > 0) { 
+            mixer[id].setMute(false);
+            muteVol.classList.remove("clicked");
+            muted.classList.remove("clicked");
+            volSlider.value = tracks[id].originalVolume;
         }
     })
     //SPEED SLIDER /////////////////////////////////////////////////////////////

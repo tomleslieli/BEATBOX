@@ -10,14 +10,14 @@ BeatBox pairs an easy-to-use / minimalistic UI with industry-standard features s
     - Hot Cues
     - Loops
 
-##################################################
+########################################################################
 
 BeatBox utilizes third-party components such as Wavesurfer.js and Font-Awesome stylesheets. More information on these tools at the following links:
 
 https://wavesurfer-js.org/
 https://fontawesome.com/
 
-##################################################
+########################################################################
 
 Upcoming updates / integrations:
 
@@ -29,7 +29,7 @@ Upcoming updates / integrations:
     - Biquad Filters
     - Sample Libraries
 
-##################################################
+########################################################################
 
 BeatBox was coded with love over the course of a week by Tom Leslie Li.
 
@@ -50,7 +50,7 @@ https://www.instagram.com/tomleslieli/
 
 https://vimeo.com/tomleslieli/
 
-##################################################
+########################################################################
 
 Original Project Roadmap:
 

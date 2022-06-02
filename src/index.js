@@ -252,7 +252,6 @@ const createTrack = function (id) {
     })
     clearLoop.addEventListener("click", () => {
             tracks[id].looped = false;
-            mixer[id].play(mixer[id].getCurrentTime());
             loopIn.classList.remove("clicked");
             loopOut.classList.remove("clicked");
             tracks[id].in = 0;

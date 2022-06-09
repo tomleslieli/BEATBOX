@@ -53,6 +53,13 @@ splashScreen.addEventListener("click", () => {
         splashScreen.classList.add("splashed");
     }, 1500);
 })
+const refLinks = document.querySelector(".ref-links")
+
+refLinks.addEventListener("click", (event) => {
+    event.stopPropogation();
+})
+
+
 // PLAYER CREATOR ///////////////////////////////////////////////////////////
 const createTrack = function (id) {
 

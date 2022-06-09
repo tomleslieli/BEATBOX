@@ -35,9 +35,6 @@ header {
     margin: none;
     padding: none;
     position: fixed;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     background-color: rgb(40, 80, 97);
     color: rgb(249, 222, 187);
 
@@ -49,6 +46,19 @@ header {
     opacity: 85%;
 
     cursor: pointer;
+}
+
+.ref-links {
+    position: relative;
+    top: 545px;
+    left: 70px;
+    font-size: 20px;
+}
+:hover.ref-wavesurfer{
+    color: aliceblue;
+}
+:hover.ref-fontawesome{
+    color: aliceblue;
 }
 .splash.clicked{
     visibility: visible;
@@ -1412,6 +1422,9 @@ footer {
     color: aliceblue;
 }
 .github {
+    color: aliceblue;
+}
+.linkedin {
     color: aliceblue;
 }
 a {

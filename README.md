@@ -8,11 +8,6 @@
 
 ![User Guide](assets/images/USERGUIDE.png?raw=true "User Guide")
 
-
-#### Buy / Sell a Stock
-
-![Buy / Sell Stock](https://robinhood-clone-assets.s3.amazonaws.com/buy-stock-compressed.gif)
-
 ## Background and Technologies
 
 BeatBox is a free, open source four-channel DJ application. Suited for both beginners as well as advanced DJs.

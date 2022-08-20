@@ -54,37 +54,25 @@ https://fontawesome.com/
 ![User Guide](assets/images/USERGUIDE.png?raw=true "User Guide")
 
 #### Load Tracks
-
+###### Click 'Load' to load a track & 'Clear' to clear the track. You may load up to four tracks at a time.
 ![Load Tracks](https://tomleslieli-portfolio.s3.amazonaws.com/load-track+(1).gif)
 
-###### Click 'Load' to load a track & 'Clear' to clear the track. You may load up to four tracks at a time.
-
 #### Play / Pause
-
+###### Click the 'Play' button to begin playback. Click the 'Pause' button to stop playback at the current playhead. Click the 'Stop' button to stop playback and reset payback to the begining of the track.
 ![Play / Pause](https://tomleslieli-portfolio.s3.amazonaws.com/play-pause+(1).gif)
 
-###### Click the 'Play' button to begin playback. Click the 'Pause' button to stop playback at the current playhead. Click the 'Stop' button to stop playback and reset payback to the begining of the track.
-
 #### Toggle View / Seek
-
+###### Click 'Toggle View' to toggle between a window view of the current playhead & of the entire track. Click on the waveform to seek.
 ![Toggle View / Seek](https://tomleslieli-portfolio.s3.amazonaws.com/toggle-seek-track+(1).gif)
 
-###### Click 'Toggle View' to toggle between a window view of the current playhead & of the entire track. Click on the waveform to seek.
-
 #### Volume / Speed Sliders
-
+###### Use the 'Volume' and 'Playback Speed' sliders to adjust the output level and speed of the track. Click on the 'Volume' icon to mute / unmute, and the 'Speed' icon to revert playback speed to 1x.
 ![Volume / Speed Sliders](https://tomleslieli-portfolio.s3.amazonaws.com/sliders+(1).gif)
 
-###### Use the 'Volume' and 'Playback Speed' sliders to adjust the output level and speed of the track. Click on the 'Volume' icon to mute / unmute, and the 'Speed' icon to revert playback speed to 1x.
-
 #### Loops
-
+###### Click 'In' to set the in-point of a loop. Click 'Out' to set the output of a loop. The loop will automatically start when both in & out-points are set. Click 'Clear' to clear the loop.
 ![Loops](https://tomleslieli-portfolio.s3.amazonaws.com/loops+(1).gif)
 
-###### Click 'In' to set the in-point of a loop. Click 'Out' to set the output of a loop. The loop will automatically start when both in & out-points are set. Click 'Clear' to clear the loop.
-
 #### Hot Cues
-
-![Hot Cues](https://tomleslieli-portfolio.s3.amazonaws.com/hot-cues+(1).gif)
-
 ###### Click '1' or '2' to set a hot cue. Once a hot cue is set, you may click on the hot cue to jump to this position. Click on the 'Reset' icon beneath a hot cue to clear the hot cue.
+![Hot Cues](https://tomleslieli-portfolio.s3.amazonaws.com/hot-cues+(1).gif)

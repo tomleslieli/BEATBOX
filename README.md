@@ -67,7 +67,7 @@ https://fontawesome.com/
 
 #### Volume / Speed Sliders
 ###### Use the 'Volume' and 'Playback Speed' sliders to adjust the output level and speed of the track. Click on the 'Volume' icon to mute / unmute, and the 'Speed' icon to revert playback speed to 1x.
-![Volume / Speed Sliders](https://tomleslieli-portfolio.s3.amazonaws.com/sliders+(1).gif)
+![Volume / Speed Sliders](https://tomleslieli-portfolio.s3.amazonaws.com/sliders.gif)
 
 #### Loops
 ###### Click 'In' to set the in-point of a loop. Click 'Out' to set the output of a loop. The loop will automatically start when both in & out-points are set. Click 'Clear' to clear the loop.

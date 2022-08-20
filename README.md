@@ -49,7 +49,7 @@ https://fontawesome.com/
 - Sample Libraries
 
 
-### User Guide
+### User Guide & Tutorial
 
 ![User Guide](assets/images/USERGUIDE.png?raw=true "User Guide")
 
